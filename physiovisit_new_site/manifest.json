@@ -1,0 +1,20 @@
+{
+  "name": "PhysioVisit - Kinesitherapie aan Huis",
+  "short_name": "PhysioVisit",
+  "description": "Professionele kinesitherapie aan huis in Grimbergen en verhuur van revalidatieapparatuur",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F1E9",
+  "theme_color": "#6D8299",
+  "orientation": "portrait-primary",
+  "categories": ["health", "medical"],
+  "lang": "nl-BE",
+  "icons": [
+    {
+      "src": "assets/img/physiovisit logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
