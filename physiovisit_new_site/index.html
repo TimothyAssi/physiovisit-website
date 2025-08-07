@@ -8,44 +8,82 @@
     <meta name="keywords" content="kine aan huis Grimbergen, kinetec huren België, hometrainer verhuur België, revalidatieapparatuur verhuur, CPM machine huren">
     <meta name="author" content="PhysioVisit">
     
-    <!-- Critical resource preloading for performance -->
+    <!-- Optimized resource loading without layout shifts -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical images preload -->
     <link rel="preload" href="assets/img/physiovisit logo.png" as="image">
     <link rel="preload" href="assets/img/Kineaanhuis.jpeg" as="image" media="(min-width: 769px)">
     <link rel="preload" href="assets/img/homepage mobiel.png" as="image" media="(max-width: 768px)">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     
-    <!-- Critical CSS (inline for performance) -->
-    <style>
-        /* Critical above-the-fold CSS */
-        body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;}
-        .navbar{background:#fff!important;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-        .hero-section{background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),url('assets/img/Kineaanhuis.jpeg') center/cover;min-height:75vh;display:flex;align-items:center;padding-top:100px;}
-        .hero-content{text-align:center;color:white;}
-        .btn-primary{background:#007bff;border:#007bff;padding:12px 30px;}
-        @media (max-width:768px){.hero-section{background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),url('assets/img/homepage mobiel.png') center/cover;min-height:40vh;padding-top:0;}.hero-section .container{margin-top:-100px;padding-top:5px;}}
-    </style>
-    
-    <!-- Defer non-critical CSS -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <style>@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2')}</style>
+    <!-- CSS - Normal loading to prevent layout shifts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#6D8299">
     
-    <!-- Fallback for no-JS -->
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="styles.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
-    </noscript>
+    <!-- Performance optimizations without layout shifts -->
+    <style>
+        .hero-section {
+            min-height: 75vh !important;
+            display: flex !important;
+            align-items: center !important;
+            padding-top: 100px !important;
+            background-position: center center !important;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding-top: 0px !important;
+                min-height: 40vh !important;
+                align-items: flex-start !important;
+                background-position: 0% center !important;
+            }
+            
+            .hero-section .container {
+                margin-top: -100px !important;
+                padding-top: 5px !important;
+            }
+            
+            .hero-section .hero-content {
+                margin-top: -20px !important;
+            }
+        }
+        
+        /* Prevent layout shifts with fixed dimensions */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            aspect-ratio: 400/480;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            aspect-ratio: 400/350;
+        }
+        
+        /* Font display swap to prevent FOIT */
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+    </style>
     
     <!-- Google Tag Manager -->
     <script>
@@ -784,16 +822,17 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     
-    <!-- Service Worker Registration for Performance -->
+    <!-- Service Worker Registration for Performance - Delayed -->
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
+            // Register after initial render to avoid blocking
+            setTimeout(() => {
                 navigator.serviceWorker.register('/sw.js')
                     .then(registration => console.log('SW registered'))
                     .catch(registrationError => console.log('SW registration failed'));
-            });
+            }, 1000);
         }
     </script>
     <!-- Custom JS -->
@@ -1021,12 +1060,21 @@
     
     <!-- Optimized image and layout handling -->
     <script>
-        // Prevent layout shifts by setting image dimensions
+        // Prevent layout shifts - apply dimensions immediately  
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img:not([width]):not([height])');
+            const images = document.querySelectorAll('img');
             images.forEach(img => {
-                if (img.src && !img.getAttribute('width')) {
-                    img.style.aspectRatio = '16/9'; // Default aspect ratio
+                // Set dimensions before loading to prevent shifts
+                if (img.classList.contains('service-image')) {
+                    img.style.width = '100%';
+                    img.style.height = '480px';
+                    img.style.objectFit = 'cover';
+                } else if (img.parentElement && img.parentElement.classList.contains('team-photo')) {
+                    img.style.width = '100%';
+                    img.style.height = '350px';
+                    img.style.objectFit = 'cover';
+                } else if (!img.getAttribute('width') && !img.getAttribute('height')) {
+                    img.style.aspectRatio = 'attr(width) / attr(height)';
                     img.style.width = '100%';
                     img.style.height = 'auto';
                 }
