@@ -49,42 +49,266 @@
         }
     </style>
     
-    <!-- Structured Data for SEO -->
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW27NH9Q');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY8Q6GZEVY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NY8Q6GZEVY', {
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure',
+        anonymize_ip: true
+    });
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'FACEBOOK_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_CODE" />
+    
+    <!-- Comprehensive Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PhysioVisit",
-      "description": "Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur in Grimbergen en omgeving",
-      "url": "https://www.physiovisit.be",
-      "telephone": "0474878021",
-      "email": "info@physiovisit.be",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kasteelstraat 89",
-        "addressLocality": "Strombeek-Bever",
-        "postalCode": "1853",
-        "addressCountry": "BE"
-      },
-      "areaServed": [
-        "Grimbergen",
-        "Strombeek-Bever", 
-        "Humbeek",
-        "Beigem",
-        "Koningslo"
-      ],
-      "priceRange": "€€",
-      "openingHours": "Mo-Fr 09:00-17:00",
-      "serviceType": ["Kinesitherapie", "Fysiotherapie", "Revalidatieapparatuur verhuur"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "24"
-      }
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.physiovisit.be/#localbusiness",
+          "name": "PhysioVisit",
+          "alternateName": "PhysioVisit Kinesitherapie",
+          "description": "Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur in Grimbergen en omgeving. Gespecialiseerd in orthopedie, neurologie en gangrevalidatie.",
+          "url": "https://www.physiovisit.be",
+          "sameAs": [
+            "https://g.page/physiovisit",
+            "https://www.facebook.com/physiovisit",
+            "https://www.linkedin.com/company/physiovisit"
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.physiovisit.be/assets/img/physiovisit%20logo.png",
+            "width": 200,
+            "height": 200
+          },
+          "image": [
+            "https://www.physiovisit.be/assets/img/homepage.png",
+            "https://www.physiovisit.be/assets/img/Kineaanhuis.jpeg",
+            "https://www.physiovisit.be/assets/img/Kinetec.jpeg"
+          ],
+          "telephone": "+32474878021",
+          "email": "info@physiovisit.be",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kasteelstraat 89",
+            "addressLocality": "Strombeek-Bever",
+            "postalCode": "1853",
+            "addressRegion": "Vlaams-Brabant",
+            "addressCountry": "BE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "50.9157",
+            "longitude": "4.3583"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Grimbergen"
+            },
+            {
+              "@type": "City",
+              "name": "Strombeek-Bever"
+            },
+            {
+              "@type": "City",
+              "name": "Humbeek"
+            },
+            {
+              "@type": "City",
+              "name": "Beigem"
+            },
+            {
+              "@type": "City",
+              "name": "Koningslo"
+            }
+          ],
+          "priceRange": "€€",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Cash, Bank Transfer, Insurance",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "serviceType": [
+            "Kinesitherapie",
+            "Fysiotherapie",
+            "Revalidatieapparatuur verhuur",
+            "Orthopedie",
+            "Neurologie",
+            "Gangrevalidatie"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "PhysioVisit Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Kinesitherapie aan Huis",
+                  "description": "Professionele kinesitherapie behandelingen bij u thuis"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Kinetec Verhuur",
+                  "description": "Kinetec CPM machines voor knierevalidatie"
+                },
+                "price": "17",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "17",
+                  "priceCurrency": "EUR",
+                  "unitText": "per dag"
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "61",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Helen S."
+              },
+              "reviewBody": "Charlotte has worked with me since I had knee replacement surgery. She has been kind, helpful and encouraging every step of the way! Thank you for making each session bearable."
+            },
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Koen D."
+              },
+              "reviewBody": "Op woensdag gebeld voor een kinetec te huren en de dag erna stond Timothy al aan de deur. Heel vriendelijk bedrijf en alles heel vlot verlopen."
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.physiovisit.be/#website",
+          "url": "https://www.physiovisit.be",
+          "name": "PhysioVisit",
+          "description": "Kinesitherapie aan huis en verhuur van revalidatieapparatuur in België",
+          "publisher": {
+            "@id": "https://www.physiovisit.be/#localbusiness"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.physiovisit.be/?s={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.physiovisit.be/#organization",
+          "name": "PhysioVisit",
+          "url": "https://www.physiovisit.be",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.physiovisit.be/#logo",
+            "url": "https://www.physiovisit.be/assets/img/physiovisit%20logo.png",
+            "width": 200,
+            "height": 200,
+            "caption": "PhysioVisit Logo"
+          },
+          "image": {
+            "@id": "https://www.physiovisit.be/#logo"
+          },
+          "foundingDate": "2020",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Timothy Assi"
+            },
+            {
+              "@type": "Person",
+              "name": "Charlotte Verdoodt"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+32474878021",
+              "contactType": "customer service",
+              "availableLanguage": ["Dutch", "French", "English"],
+              "areaServed": "BE"
+            },
+            {
+              "@type": "ContactPoint",
+              "email": "info@physiovisit.be",
+              "contactType": "customer service",
+              "availableLanguage": ["Dutch", "French", "English"]
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW27NH9Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
@@ -565,6 +789,226 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.min.js"></script>
+    
+    <!-- Enhanced Tracking and Analytics -->
+    <script>
+    // Enhanced GA4 Event Tracking
+    function trackEvent(eventName, eventParams = {}) {
+        // GA4 Tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', eventName, eventParams);
+        }
+        
+        // GTM Tracking
+        if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+        
+        // Facebook Pixel Tracking
+        if (typeof fbq !== 'undefined') {
+            fbq('track', eventName, eventParams);
+        }
+    }
+    
+    // Phone Click Tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        phoneLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                const phoneNumber = this.href.replace('tel:', '');
+                trackEvent('phone_call_click', {
+                    'event_category': 'contact',
+                    'event_label': phoneNumber,
+                    'phone_number': phoneNumber,
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+                
+                // Facebook Pixel Lead Event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_category: 'Phone Call',
+                        content_name: 'Phone Click',
+                        value: phoneNumber
+                    });
+                }\n            });
+        });
+        
+        // Email Click Tracking
+        const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+        emailLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                const email = this.href.replace('mailto:', '');
+                trackEvent('email_click', {
+                    'event_category': 'contact',
+                    'event_label': email,
+                    'email_address': email,
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+                
+                // Facebook Pixel Lead Event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_category: 'Email',
+                        content_name: 'Email Click',
+                        value: email
+                    });
+                }
+            });
+        });
+        
+        // External Link Tracking
+        const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="physiovisit.be"])');
+        externalLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                trackEvent('external_link_click', {
+                    'event_category': 'external_links',
+                    'event_label': this.href,
+                    'link_url': this.href,
+                    'link_text': this.innerText || this.textContent
+                });
+            });
+        });
+        
+        // Service Button Tracking
+        const serviceButtons = document.querySelectorAll('.btn[href*="kinesitherapie"], .btn[href*="kinetec"], .btn[href*="hometrainer"], .btn[href*="contact"]');
+        serviceButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                const buttonText = this.innerText || this.textContent;
+                const buttonHref = this.href;
+                let serviceType = 'unknown';
+                
+                if (buttonHref.includes('kinesitherapie')) serviceType = 'kinesitherapie';
+                else if (buttonHref.includes('kinetec')) serviceType = 'kinetec_rental';
+                else if (buttonHref.includes('hometrainer')) serviceType = 'hometrainer_rental';
+                else if (buttonHref.includes('contact')) serviceType = 'contact';
+                
+                trackEvent('service_button_click', {
+                    'event_category': 'services',
+                    'event_label': serviceType,
+                    'button_text': buttonText,
+                    'service_type': serviceType,
+                    'page_title': document.title
+                });
+                
+                // Facebook Pixel Interest Event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', {
+                        content_category: 'Service Interest',
+                        content_name: serviceType,
+                        value: buttonText
+                    });
+                }
+            });
+        });
+        
+        // Google Reviews Link Tracking
+        const reviewLinks = document.querySelectorAll('a[href*="g.page"], a[href*="google.com/maps"], a[href*="google"]');
+        reviewLinks.forEach(function(link) {
+            if (link.href.includes('physiovisit') || link.innerText.toLowerCase().includes('review') || link.innerText.toLowerCase().includes('google')) {
+                link.addEventListener('click', function(e) {
+                    trackEvent('google_reviews_click', {
+                        'event_category': 'reviews',
+                        'event_label': 'google_reviews',
+                        'link_text': this.innerText || this.textContent
+                    });
+                });
+            }
+        });
+        
+        // Scroll Tracking (25%, 50%, 75%, 100%)
+        let scrollThresholds = [25, 50, 75, 100];
+        let scrollTracked = [];
+        
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            
+            scrollThresholds.forEach(function(threshold) {
+                if (scrollPercent >= threshold && !scrollTracked.includes(threshold)) {
+                    scrollTracked.push(threshold);
+                    trackEvent('scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': threshold + '%',
+                        'scroll_depth': threshold,
+                        'page_title': document.title
+                    });
+                }
+            });
+        });
+        
+        // Page View Tracking with Enhanced Data
+        trackEvent('page_view', {
+            'event_category': 'page_interaction',
+            'page_title': document.title,
+            'page_location': window.location.href,
+            'page_path': window.location.pathname,
+            'user_agent': navigator.userAgent,
+            'referrer': document.referrer,
+            'language': navigator.language
+        });
+        
+        // Time on Page Tracking
+        let startTime = Date.now();
+        let timeThresholds = [30, 60, 120, 300]; // 30s, 1min, 2min, 5min
+        let timeTracked = [];
+        
+        setInterval(function() {
+            const timeSpent = Math.floor((Date.now() - startTime) / 1000);
+            
+            timeThresholds.forEach(function(threshold) {
+                if (timeSpent >= threshold && !timeTracked.includes(threshold)) {
+                    timeTracked.push(threshold);
+                    trackEvent('time_on_page', {
+                        'event_category': 'engagement',
+                        'event_label': threshold + 's',
+                        'time_spent': threshold,
+                        'page_title': document.title
+                    });
+                }
+            });
+        }, 10000); // Check every 10 seconds
+    });
+    
+    // Form Tracking (to be added to contact forms)
+    function trackFormSubmission(formName, formData = {}) {
+        trackEvent('form_submit', {
+            'event_category': 'lead_generation',
+            'event_label': formName,
+            'form_name': formName,
+            ...formData
+        });
+        
+        // Facebook Pixel Lead Event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_category: 'Form Submission',
+                content_name: formName
+            });
+        }
+    }
+    
+    // Emergency Service Tracking
+    function trackEmergencyService() {
+        trackEvent('emergency_service_request', {
+            'event_category': 'emergency',
+            'event_label': 'emergency_physiotherapy',
+            'page_title': document.title
+        });
+        
+        // Facebook Pixel Lead Event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_category: 'Emergency Service',
+                content_name: 'Emergency Physiotherapy Request',
+                value: 100
+            });
+        }
+    }
+    </script>
     
     <!-- Image handling -->
     <script>

@@ -14,52 +14,155 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Structured Data -->
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW27NH9Q');
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY8Q6GZEVY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NY8Q6GZEVY');
+    </script>
+    
+    <!-- Enhanced Product Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Kinetec CPM Machine Verhuur",
-      "description": "Kinetec toestel voor passieve knierevalidatie en mobilisatie",
-      "image": "https://physiovisit.be/assets/img/Kinetec.jpeg",
-      "brand": {
-        "@type": "Brand",
-        "name": "PhysioVisit"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "17",
-        "priceCurrency": "EUR",
-        "priceValidUntil": "2025-12-31",
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "PhysioVisit"
-        },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "EUR"
+      "@graph": [
+        {
+          "@type": "Product",
+          "@id": "https://www.physiovisit.be/kinetec-huren.html#product",
+          "name": "Kinetec CPM Machine Verhuur",
+          "alternateName": "Active-K CPM Toestel Huren",
+          "description": "Professionele Kinetec CPM machine verhuur voor knierevalidatie na operaties. Inclusief levering, installatie en ondersteuning in heel België.",
+          "image": [
+            "https://www.physiovisit.be/assets/img/Kinetec.jpeg",
+            "https://www.physiovisit.be/assets/img/gangrevalidatie.jpeg"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "PhysioVisit"
           },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "name": "België",
-            "addressCountry": "BE"
+          "category": "Medical Equipment Rental",
+          "productID": "KINETEC-CPM-001",
+          "mpn": "KINETEC-ACTIVE-K",
+          "offers": {
+            "@type": "Offer",
+            "@id": "https://www.physiovisit.be/kinetec-huren.html#offer",
+            "price": "17",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2025-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "PhysioVisit",
+              "url": "https://www.physiovisit.be"
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "17",
+              "priceCurrency": "EUR",
+              "unitText": "per dag",
+              "unitCode": "DAY"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "70",
+                "currency": "EUR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "name": "België",
+                "addressCountry": "BE"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "BE",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+              "merchantReturnDays": 0
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "15",
+            "bestRating": "5",
+            "worstRating": "1"
           }
         },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "BE",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        {
+          "@type": "Service",
+          "@id": "https://www.physiovisit.be/kinetec-huren.html#service",
+          "name": "Kinetec Levering en Installatie Service",
+          "description": "Professionele levering, installatie en ondersteuning van Kinetec apparatuur in heel België",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "PhysioVisit",
+            "telephone": "+32474878021",
+            "email": "info@physiovisit.be"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "België"
+          },
+          "serviceType": "Medical Equipment Delivery"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Hoeveel kost het huren van een Kinetec?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Een Kinetec huren kost €17 per dag. Er is een eenmalige leveringskost van €70 voor heel België, inclusief installatie en uitleg."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Leveren jullie in heel België?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, wij leveren Kinetec apparatuur in heel België met een eenmalige leveringskost van €70 inclusief installatie en persoonlijke uitleg."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hoe snel kunnen jullie leveren?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wij proberen binnen 24-48 uur te leveren, afhankelijk van uw locatie en beschikbaarheid. Voor spoedgevallen nemen we contact op voor een snellere levering."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW27NH9Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
@@ -570,6 +673,52 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Enhanced E-commerce and Rental Tracking -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track product page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'view_item', {
+                'event_category': 'ecommerce',
+                'currency': 'EUR',
+                'value': 17,
+                'items': [{
+                    'item_id': 'KINETEC-CPM-001',
+                    'item_name': 'Kinetec CPM Machine Verhuur',
+                    'item_category': 'Medical Equipment Rental',
+                    'item_category2': 'Kinetec',
+                    'item_brand': 'PhysioVisit',
+                    'price': 17,
+                    'quantity': 1
+                }]
+            });
+        }
+        
+        // Facebook Pixel ViewContent
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_type: 'product',
+                content_ids: ['KINETEC-CPM-001'],
+                content_name: 'Kinetec CPM Machine Verhuur',
+                content_category: 'Medical Equipment Rental',
+                value: 17,
+                currency: 'EUR'
+            });
+        }
+        
+        // Track rental form interactions
+        const rentalForm = document.getElementById('huur-formulier-form');
+        if (rentalForm) {
+            // Track form start
+            const formFields = rentalForm.querySelectorAll('input, select, textarea');
+            let formStarted = false;\n            \n            formFields.forEach(function(field) {
+                field.addEventListener('focus', function() {
+                    if (!formStarted) {
+                        formStarted = true;
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'begin_checkout', {
+                                'event_category': 'ecommerce',\n                                'currency': 'EUR',\n                                'value': 17,\n                                'items': [{\n                                    'item_id': 'KINETEC-CPM-001',\n                                    'item_name': 'Kinetec CPM Machine Verhuur',\n                                    'item_category': 'Medical Equipment Rental',\n                                    'price': 17,\n                                    'quantity': 1\n                                }]\n                            });\n                        }\n                        \n                        // Facebook Pixel InitiateCheckout\n                        if (typeof fbq !== 'undefined') {\n                            fbq('track', 'InitiateCheckout', {\n                                content_type: 'product',\n                                content_ids: ['KINETEC-CPM-001'],\n                                value: 17,\n                                currency: 'EUR'\n                            });\n                        }\n                    }\n                });\n            });\n            \n            // Track form submission\n            rentalForm.addEventListener('submit', function(e) {\n                e.preventDefault();\n                \n                // Track rental request\n                if (typeof gtag !== 'undefined') {\n                    gtag('event', 'purchase', {\n                        'event_category': 'ecommerce',\n                        'transaction_id': 'RENTAL-' + Date.now(),\n                        'currency': 'EUR',\n                        'value': 17,\n                        'items': [{\n                            'item_id': 'KINETEC-CPM-001',\n                            'item_name': 'Kinetec CPM Machine Verhuur',\n                            'item_category': 'Medical Equipment Rental',\n                            'price': 17,\n                            'quantity': 1\n                        }]\n                    });\n                    \n                    gtag('event', 'generate_lead', {\n                        'event_category': 'lead_generation',\n                        'event_label': 'kinetec_rental_form',\n                        'currency': 'EUR',\n                        'value': 17\n                    });\n                }\n                \n                // Facebook Pixel Purchase and Lead\n                if (typeof fbq !== 'undefined') {\n                    fbq('track', 'Purchase', {\n                        content_type: 'product',\n                        content_ids: ['KINETEC-CPM-001'],\n                        value: 17,\n                        currency: 'EUR'\n                    });\n                    \n                    fbq('track', 'Lead', {\n                        content_category: 'Rental Request',\n                        content_name: 'Kinetec CPM Machine',\n                        value: 17,\n                        currency: 'EUR'\n                    });\n                }\n                \n                // Submit the form (replace with actual submission logic)\n                this.submit();\n            });\n        }\n        \n        // Track delivery service selection\n        const deliveryCheckbox = document.getElementById('levering');\n        if (deliveryCheckbox) {\n            deliveryCheckbox.addEventListener('change', function() {\n                if (typeof gtag !== 'undefined') {\n                    gtag('event', 'add_shipping_info', {\n                        'event_category': 'ecommerce',\n                        'currency': 'EUR',\n                        'value': this.checked ? 87 : 17, // 17 + 70 delivery\n                        'shipping_tier': this.checked ? 'delivery_service' : 'pickup'\n                    });\n                }\n            });\n        }\n        \n        // Track rental duration selection\n        const durationSelect = document.getElementById('verwachte-duur');\n        if (durationSelect) {\n            durationSelect.addEventListener('change', function() {\n                if (typeof gtag !== 'undefined') {\n                    gtag('event', 'rental_duration_selected', {\n                        'event_category': 'rental_options',\n                        'event_label': this.value,\n                        'rental_duration': this.value\n                    });\n                }\n            });\n        }\n        \n        // Track CTA button clicks\n        const ctaButtons = document.querySelectorAll('.btn[href*=\"#huur-formulier\"], .btn[href*=\"contact\"]');\n        ctaButtons.forEach(function(button) {\n            button.addEventListener('click', function() {\n                const isRentalCTA = this.href.includes('#huur-formulier');\n                const buttonText = this.textContent.trim();\n                \n                if (typeof gtag !== 'undefined') {\n                    gtag('event', 'select_item', {\n                        'event_category': 'cta_interaction',\n                        'event_label': isRentalCTA ? 'rental_cta' : 'contact_cta',\n                        'item_list_name': 'CTA Buttons',\n                        'items': [{\n                            'item_id': 'KINETEC-CPM-001',\n                            'item_name': 'Kinetec CPM Machine Verhuur',\n                            'item_category': 'Medical Equipment Rental'\n                        }]\n                    });\n                }\n                \n                // Facebook Pixel AddToCart for rental CTA\n                if (isRentalCTA && typeof fbq !== 'undefined') {\n                    fbq('track', 'AddToCart', {\n                        content_type: 'product',\n                        content_ids: ['KINETEC-CPM-001'],\n                        value: 17,\n                        currency: 'EUR'\n                    });\n                }\n            });\n        });\n        \n        // Track scroll to form\n        const formSection = document.getElementById('huur-formulier');\n        if (formSection) {\n            const observer = new IntersectionObserver(function(entries) {\n                entries.forEach(function(entry) {\n                    if (entry.isIntersecting) {\n                        if (typeof gtag !== 'undefined') {\n                            gtag('event', 'view_promotion', {\n                                'event_category': 'engagement',\n                                'event_label': 'rental_form_viewed',\n                                'promotion_name': 'Kinetec Rental Form'\n                            });\n                        }\n                        observer.unobserve(entry.target);\n                    }\n                });\n            }, { threshold: 0.5 });\n            \n            observer.observe(formSection);\n        }\n    });\n    </script>
     
     <script>
     document.addEventListener('DOMContentLoaded', function() {

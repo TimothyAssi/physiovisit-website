@@ -13,8 +13,125 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW27NH9Q');
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY8Q6GZEVY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NY8Q6GZEVY');
+    </script>
+    
+    <!-- Service Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://www.physiovisit.be/kinesitherapie.html#medicalbusiness",
+          "name": "PhysioVisit Kinesitherapie aan Huis",
+          "description": "Professionele kinesitherapie aan huis gespecialiseerd in orthopedie, neurologie en gangrevalidatie in regio Grimbergen",
+          "url": "https://www.physiovisit.be/kinesitherapie.html",
+          "telephone": "+32474878021",
+          "email": "info@physiovisit.be",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kasteelstraat 89",
+            "addressLocality": "Strombeek-Bever",
+            "postalCode": "1853",
+            "addressCountry": "BE"
+          },
+          "areaServed": [
+            "Grimbergen", "Strombeek-Bever", "Humbeek", "Beigem", "Koningslo"
+          ],
+          "medicalSpecialty": [
+            "Physical Therapy",
+            "Rehabilitation Medicine",
+            "Orthopedics",
+            "Neurology"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.physiovisit.be/kinesitherapie.html#orthopedie",
+          "name": "Orthopedie Kinesitherapie",
+          "description": "Gespecialiseerde orthopedie behandeling voor gewrichtsproblemen, spierblessures en post-operatieve revalidatie",
+          "provider": {
+            "@id": "https://www.physiovisit.be/kinesitherapie.html#medicalbusiness"
+          },
+          "serviceType": "Physical Therapy",
+          "areaServed": ["Grimbergen", "Strombeek-Bever", "Humbeek", "Beigem", "Koningslo"]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.physiovisit.be/kinesitherapie.html#neurologie",
+          "name": "Neurologische Kinesitherapie",
+          "description": "Professionele neurologische revalidatie voor CVA, MS, Parkinson en andere neurologische aandoeningen",
+          "provider": {
+            "@id": "https://www.physiovisit.be/kinesitherapie.html#medicalbusiness"
+          },
+          "serviceType": "Neurological Rehabilitation",
+          "areaServed": ["Grimbergen", "Strombeek-Bever", "Humbeek", "Beigem", "Koningslo"]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.physiovisit.be/kinesitherapie.html#gangrevalidatie",
+          "name": "Gangrevalidatie & Evenwichtstraining",
+          "description": "Gespecialiseerde gangrevalidatie en evenwichtstraining voor verbeterde mobiliteit en valpreventie",
+          "provider": {
+            "@id": "https://www.physiovisit.be/kinesitherapie.html#medicalbusiness"
+          },
+          "serviceType": "Gait Training",
+          "areaServed": ["Grimbergen", "Strombeek-Bever", "Humbeek", "Beigem", "Koningslo"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Welke kinesitherapie diensten bieden jullie aan huis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wij bieden orthopedie, neurologie en gangrevalidatie aan huis in regio Grimbergen, Strombeek-Bever, Humbeek, Beigem en Koningslo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "In welke gemeenten komen jullie aan huis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wij komen aan huis in Grimbergen, Strombeek-Bever, Humbeek, Beigem en Koningslo voor kinesitherapie behandelingen."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hoe maak ik een afspraak?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "U kunt bellen naar 0474 87 80 21 of een e-mail sturen naar info@physiovisit.be voor een afspraak."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW27NH9Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
@@ -496,6 +613,71 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Service Page Tracking -->
+    <script>
+    // Service-specific tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track service page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'service_page_view', {
+                'event_category': 'services',
+                'event_label': 'kinesitherapie',
+                'service_type': 'kinesitherapie',
+                'page_title': document.title
+            });
+        }
+        
+        // Track FAQ interactions
+        const faqButtons = document.querySelectorAll('.accordion-button');
+        faqButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                const questionText = this.textContent.trim();
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'faq_interaction', {
+                        'event_category': 'engagement',
+                        'event_label': 'faq_' + (index + 1),
+                        'question': questionText,
+                        'service_type': 'kinesitherapie'
+                    });
+                }
+            });
+        });
+        
+        // Track specialty section views
+        const specialtyLinks = document.querySelectorAll('a[href*="#"]');
+        specialtyLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                const specialty = this.href.split('#')[1];
+                if (specialty && ['orthopedie', 'neurologie', 'gangrevalidatie'].includes(specialty)) {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'specialty_interest', {
+                            'event_category': 'services',
+                            'event_label': specialty,
+                            'specialty_type': specialty
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Track location badge clicks
+        const locationBadges = document.querySelectorAll('.badge[href*="kinesitherapie-aan-huis"]');
+        locationBadges.forEach(function(badge) {
+            badge.addEventListener('click', function() {
+                const location = this.textContent.trim();
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_interest', {
+                        'event_category': 'location',
+                        'event_label': location,
+                        'location_name': location,
+                        'service_type': 'kinesitherapie'
+                    });
+                }
+            });
+        });
+    });
+    </script>
     
     <script>
     function toggleDropdown(event) {

@@ -1,10 +1,10 @@
-# Robots.txt for PhysioVisit website
-# Allow all crawlers including Google Ads to access the site
+# Robots.txt for PhysioVisit - Kinesitherapie aan Huis & Kinetec Verhuur
+# Updated: January 2025
 
 User-agent: *
 Allow: /
 
-# Specifically allow Google crawlers (important for Google Ads)
+# Explicitly allow important SEO crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -17,15 +17,47 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
-# Allow Google Ads crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Allow Google Ads and Marketing crawlers
 User-agent: AdsBot-Google
 Allow: /
 
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
-# Sitemap location (you may want to create this later)
-# Sitemap: https://yourdomain.com/sitemap.xml
+User-agent: AdsBot-Google-Mobile-Apps
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow Facebook crawlers for social sharing
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block unnecessary files and folders
+Disallow: /debug-images.js
+Disallow: /image-test.html
+Disallow: /*.zip$
+Disallow: /*.md$
+Disallow: /windsurf_deployment.yaml
+
+# Sitemap locations
+Sitemap: https://www.physiovisit.be/sitemap.xml
 
 # Crawl-delay to be respectful to server resources
 Crawl-delay: 1
+
+# Host directive (preferred domain)
+Host: https://www.physiovisit.be

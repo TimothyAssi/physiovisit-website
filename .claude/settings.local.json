@@ -25,7 +25,9 @@
       "Bash(! grep -q \"isCurrentlyOpen\" \"$file\")",
       "Bash(then)",
       "Bash(fi)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:developers.google.com)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

@@ -1,67 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://physiovisit.be/</loc>
+    <loc>https://www.physiovisit.be/</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/physiovisit%20logo.png</image:loc>
+      <image:title>PhysioVisit Logo - Kinesitherapie aan Huis</image:title>
+      <image:caption>PhysioVisit - Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/homepage.png</image:loc>
+      <image:title>PhysioVisit Homepage Banner</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://physiovisit.be/contact.html</loc>
+    <loc>https://www.physiovisit.be/contact.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/contact.png</image:loc>
+      <image:title>PhysioVisit Contact</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://physiovisit.be/kinesitherapie.html</loc>
+    <loc>https://www.physiovisit.be/kinesitherapie.html</loc>
+    <lastmod>2025-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/Kineaanhuis.jpeg</image:loc>
+      <image:title>Kinesitherapie aan Huis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren.html</loc>
+    <lastmod>2025-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/Kinetec.jpeg</image:loc>
+      <image:title>Kinetec CPM Machine Verhuur</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/hometrainer-huren.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/kinetec-huren.html</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://physiovisit.be/hometrainer-huren.html</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://physiovisit.be/kinesitherapie-grimbergen.html</loc>
+    <loc>https://www.physiovisit.be/kinesitherapie-grimbergen.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/kinesitherapie-humbeek.html</loc>
+    <loc>https://www.physiovisit.be/kinesitherapie-humbeek.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/kinesitherapie-koningslo.html</loc>
+    <loc>https://www.physiovisit.be/kinesitherapie-koningslo.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/kinesitherapie-strombeek-bever.html</loc>
+    <loc>https://www.physiovisit.be/kinesitherapie-strombeek-bever.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/normale-hometrainer.html</loc>
+    <loc>https://www.physiovisit.be/normale-hometrainer.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://physiovisit.be/zetelfiets.html</loc>
+    <loc>https://www.physiovisit.be/zetelfiets.html</loc>
     <lastmod>2025-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
