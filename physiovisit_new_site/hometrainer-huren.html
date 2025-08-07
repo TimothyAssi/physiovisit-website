@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hometrainer Verhuur België - vanaf €1/dag | Levering Heel België | PhysioVisit</title>
+    <meta name="description" content="Huur hometrainers in heel België: normale hometrainer €2/dag, elektrische zetelfiets €1.50/dag, zetelfiets €1/dag. Levering €70 overal.">
+    <meta name="keywords" content="hometrainer huren België, hometrainer verhuur België, zetelfiets verhuur, elektrische hometrainer huren, revalidatie fiets verhuur">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom styles for hometrainer cards -->
+    <style>
+        .hometrainer-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+        .hometrainer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+        .hometrainer-image {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            object-position: center;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        .benefits-highlight {
+            background: linear-gradient(135deg, #A3BFFA, #6D8299);
+            color: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        .benefits-highlight h6 {
+            color: white;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .benefits-highlight ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .benefits-highlight li {
+            margin-bottom: 5px;
+        }
+        .price-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #D4A373;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 2;
+        }
+    </style>
+    
+    <!-- Updated for nationwide rental in Belgium -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": "#hometrainer-rental",
+      "name": "Hometrainer Verhuur België",
+      "description": "Hometrainers voor thuisrevalidatie - verhuur in heel België",
+      "brand": "PhysioVisit",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Normale Hometrainer",
+          "price": "2",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2025-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer", 
+          "name": "Elektrische Zetelfiets",
+          "price": "1.50",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2025-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Zetelfiets", 
+          "price": "1",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2025-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/physiovisit logo.png" alt="PhysioVisit Logo" width="45" height="45" class="me-2"
+                     onerror="this.style.display='none';"
+                     onload="console.log('✅ Logo loaded');">
+                <span>PhysioVisit</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kinesitherapie.html">Kinesitherapie aan Huis</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="hurenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Huren
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="hurenDropdown">
+                            <li><a class="dropdown-item" href="kinetec-huren.html">Kinetec Huren</a></li>
+                            <li><a class="dropdown-item active" href="hometrainer-huren.html">Hometrainer Huren</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ons-team.html">Ons Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1>Hometrainer Verhuur - Heel België</h1>
+                    <p class="lead">Professionele hometrainers voor thuisrevalidatie - beschikbaar in heel België met levering en installatie voor optimaal fitness en herstel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Kies de Perfecte Hometrainer Voor Uw Behoeften</h2>
+                <p class="lead">Elk toestel is speciaal geselecteerd voor verschillende revalidatie- en fitnessdoelen. Klik op een toestel voor meer informatie.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Normale Hometrainer -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="normale-hometrainer.html" class="hometrainer-card card h-100" style="text-decoration: none;">
+                        <div class="position-relative">
+                            <img src="assets/img/hometrainer.jpg" alt="Normale hometrainer voor cardiotraining" class="hometrainer-image" loading="lazy"
+                                 onerror="console.error('Hometrainer image failed'); this.src='assets/img/hometrainer.avif';"
+                                 onload="console.log('✅ Hometrainer image loaded');">
+                            <div class="price-badge">€2/dag</div>
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-success fs-6 px-3 py-2">Beschikbaar</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-primary-custom mb-3 text-center">Hometrainer</h3>
+                            <p class="text-muted mb-3">Ideaal voor wie zijn conditie wil verbeteren en spierkracht wil opbouwen. Perfect voor cardiotraining en gewichtsverlies.</p>
+                            
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-heart-pulse text-danger fs-4"></i>
+                                        <small class="d-block">Hartgezondheid</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-lightning text-warning fs-4"></i>
+                                        <small class="d-block">Spierkracht</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="benefits-highlight">
+                                <h6>Waarom kiezen?</h6>
+                                <ul class="mb-0">
+                                    <li><strong>Sneller herstel:</strong> Verbetert bloedcirculatie effectief</li>
+                                    <li><strong>Flexibel trainen:</strong> Pas weerstand aan op uw niveau</li>
+                                    <li><strong>Bewezen resultaten:</strong> Ideaal voor revalidatie</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <span class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i> Meer Info & Huren
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Elektrische Zetelfiets -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="electrische-zetelfiets.html" class="hometrainer-card card h-100" style="text-decoration: none;">
+                        <div class="position-relative">
+                            <img src="assets/img/electrische zetelfiets.webp" alt="Elektrische zetelfiets voor revalidatie" class="hometrainer-image" loading="lazy"
+                                 onerror="console.error('Elektrische zetelfiets image failed'); this.src='assets/img/hometrainer.avif';"
+                                 onload="console.log('✅ Elektrische zetelfiets image loaded');">
+                            <div class="price-badge">€1,50/dag</div>
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-success fs-6 px-3 py-2">Beschikbaar</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-primary-custom mb-3 text-center">Elektrische Zetelfiets</h3>
+                            <p class="text-muted mb-3">Perfect voor revalidatie en ouderen. De elektrische motor helpt bij het trappen, waardoor minder eigen kracht nodig is.</p>
+                            
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-heart-pulse text-primary fs-4"></i>
+                                        <small class="d-block">Revalidatie</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-battery-charging text-success fs-4"></i>
+                                        <small class="d-block">Elektrisch</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="benefits-highlight">
+                                <h6>Perfect voor revalidatie:</h6>
+                                <ul class="mb-0">
+                                    <li><strong>Minder inspanning:</strong> Elektrische motor helpt u</li>
+                                    <li><strong>Medisch bewezen:</strong> Ideaal na operaties</li>
+                                    <li><strong>Multitask vriendelijk:</strong> Gebruik tijdens TV kijken</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <span class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i> Meer Info & Huren
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Zetelfiets -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="zetelfiets.html" class="hometrainer-card card h-100" style="text-decoration: none;">
+                        <div class="position-relative">
+                            <img src="assets/img/zetelfiets.png" alt="Zetelfiets voor voordelige revalidatie" class="hometrainer-image" loading="lazy" style="object-fit: contain; object-position: center center; transform: scale(0.75); padding: 15px;"
+                                 onerror="console.error('Zetelfiets image failed'); this.src='assets/img/hometrainer.avif';"
+                                 onload="console.log('✅ Zetelfiets image loaded');">
+                            <div class="price-badge">€1/dag</div>
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-success fs-6 px-3 py-2">Beschikbaar</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-primary-custom mb-3 text-center">Zetelfiets</h3>
+                            <p class="text-muted mb-3">De meest betaalbare optie voor zachte beweging. Ideaal voor dagelijks gebruik en lange revalidatieperiodes.</p>
+                            
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-piggy-bank text-success fs-4"></i>
+                                        <small class="d-block">Voordelig</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-2 bg-light rounded">
+                                        <i class="bi bi-people text-info fs-4"></i>
+                                        <small class="d-block">Voor Iedereen</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="benefits-highlight">
+                                <h6>Voordelige keuze:</h6>
+                                <ul class="mb-0">
+                                    <li><strong>Beste prijs:</strong> Slechts €30 per maand</li>
+                                    <li><strong>Lage drempel:</strong> Voor alle conditieniveaus</li>
+                                    <li><strong>Zachte training:</strong> Geen stress op gewrichten</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center mt-3">
+                                <span class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i> Meer Info & Huren
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Comparison Quick Info -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <h4 class="text-center mb-4">Welke Hometrainer Past Bij U?</h4>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="border-end">
+                                    <h5 class="text-primary-custom">Hometrainer</h5>
+                                    <p class="mb-1"><strong>Voor wie:</strong> Actieve revalidatie</p>
+                                    <p class="mb-1"><strong>Doel:</strong> Conditie & kracht opbouwen</p>
+                                    <p class="mb-0"><strong>Intensiteit:</strong> Medium tot hoog</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border-end">
+                                    <h5 class="text-primary-custom">Elektrische Zetelfiets</h5>
+                                    <p class="mb-1"><strong>Voor wie:</strong> Na operaties, ouderen</p>
+                                    <p class="mb-1"><strong>Doel:</strong> Zachte reactivatie</p>
+                                    <p class="mb-0"><strong>Intensiteit:</strong> Laag tot medium</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="text-primary-custom">Zetelfiets</h5>
+                                <p class="mb-1"><strong>Voor wie:</strong> Budget-bewust</p>
+                                <p class="mb-1"><strong>Doel:</strong> Beweging op gang houden</p>
+                                <p class="mb-0"><strong>Intensiteit:</strong> Zeer laag tot laag</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Info -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2>Landelijke Service - Heel België</h2>
+                        <p class="lead">Verhuur beschikbaar in heel België, met levering en installatie overal in het land</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <h4 class="text-primary-custom mb-3">
+                            <i class="bi bi-truck me-2"></i>
+                            Inclusief Service Package
+                        </h4>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <ul class="benefits-list">
+                                    <li>🚚 Levering heel België (€70 vast tarief)</li>
+                                    <li>🔧 Installatie en uitleg ter plaatse</li>
+                                    <li>📞 24/7 telefonische ondersteuning</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="benefits-list">
+                                    <li>🔄 Ophaling na verhuurperiode</li>
+                                    <li>🧼 Professionele reiniging</li>
+                                    <li>⚕️ Begeleiding door kinesitherapeut</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section section-light" id="contact-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2>Hometrainer Huren</h2>
+                        <p>Vul onderstaand formulier in en wij nemen contact met u op voor uw hometrainer verhuur</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-3 p-4 shadow-sm">
+                        <form name="hometrainer-rental" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="hometrainerForm" action="/thankyou.html" novalidate>
+                            <input type="hidden" name="form-name" value="hometrainer-rental" />
+                            <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field" /></label></p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="naam" class="form-label">Naam *</label>
+                                    <input type="text" class="form-control" id="naam" name="naam" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefoon" class="form-label">Telefoon *</label>
+                                    <input type="tel" class="form-control" id="telefoon" name="telefoon" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="postcode" class="form-label">Postcode/Plaats *</label>
+                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Voor levering heel België" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="hometrainerType" class="form-label">Gewenste hometrainer *</label>
+                                    <select class="form-select" id="hometrainerType" name="hometrainerType" required>
+                                        <option value="">Kies uw hometrainer</option>
+                                        <option value="normale-hometrainer">Normale Hometrainer (€2/dag)</option>
+                                        <option value="elektrische-zetelfiets">Elektrische Zetelfiets (€1,50/dag)</option>
+                                        <option value="zetelfiets">Zetelfiets (€1/dag)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="startdatum" class="form-label">Gewenste startdatum</label>
+                                    <input type="date" class="form-control" id="startdatum" name="startdatum">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="periode" class="form-label">Verhuurperiode</label>
+                                    <select class="form-select" id="periode" name="periode">
+                                        <option value="">Selecteer periode</option>
+                                        <option value="1-week">1 week</option>
+                                        <option value="2-weken">2 weken</option>
+                                        <option value="1-maand">1 maand</option>
+                                        <option value="2-maanden">2 maanden</option>
+                                        <option value="anders">Andere periode</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="opmerking" class="form-label">Opmerkingen</label>
+                                    <textarea class="form-control" id="opmerking" name="opmerking" rows="3" placeholder="Eventuele bijzonderheden of vragen..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            Ik ga akkoord met verwerking van mijn gegevens voor contactdoeleinden *
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-accent btn-lg me-3">
+                                        <i class="bi bi-send me-2"></i>Aanvraag Versturen
+                                    </button>
+                                    <a href="tel:0474878021" class="btn btn-outline-primary btn-lg">
+                                        <i class="bi bi-telephone me-2"></i>Direct Bellen
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2>Start Vandaag Met Uw Thuisrevalidatie</h2>
+                    <p class="lead mb-4">Verhuur beschikbaar in heel België - van Antwerpen tot Luik, van Gent tot Hasselt</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#contact-form" class="btn btn-accent btn-lg">
+                            <i class="bi bi-calendar-plus"></i>Hometrainer Huren
+                        </a>
+                        <a href="kinetec-huren.html" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-gear"></i>Bekijk Kinetec
+                        </a>
+                        <a href="tel:0474878021" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone"></i>Bel: 0474 87 80 21
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>PhysioVisit</h5>
+                    <p>Professionele kinesitherapie aan huis regio Grimbergen en verhuur van revalidatieapparatuur in heel België.</p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Onze Diensten</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="kinesitherapie.html">Kinesitherapie aan Huis</a></li>
+                        <li><a href="kinetec-huren.html">Kinetec Verhuur</a></li>
+                        <li><a href="hometrainer-huren.html">Hometrainer Verhuur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Service Gebieden</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Kinesitherapie:</strong></li>
+                        <li>• Regio Grimbergen</li>
+                        <li class="mt-2"><strong>Verhuur:</strong></li>
+                        <li>• Heel België</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2"></i>Kasteelstraat 89, Strombeek-Bever</li>
+                        <li><i class="bi bi-telephone me-2"></i>0474 87 80 21</li>
+                        <li><i class="bi bi-envelope me-2"></i>info@physiovisit.be</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 PhysioVisit. Alle rechten voorbehouden. | Kinesitherapie Grimbergen | Verhuur Heel België</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Enhanced image loading logging
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🏃‍♂️ Hometrainer verhuur page loaded');
+            
+            // Track image loading
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                img.addEventListener('load', function() {
+                    console.log(`✅ Image ${index + 1} loaded successfully: ${this.alt}`);
+                });
+                img.addEventListener('error', function() {
+                    console.error(`❌ Image ${index + 1} failed to load: ${this.src}`);
+                });
+            });
+            
+            // Track card clicks
+            const hometrainerCards = document.querySelectorAll('.hometrainer-card');
+            hometrainerCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const productName = this.querySelector('h3').textContent;
+                    console.log(`🔗 User clicked on: ${productName}`);
+                });
+            });
+        });
+        
+        // Form handling - allow Netlify submission
+        document.getElementById('hometrainerForm').addEventListener('submit', function(e) {
+            // Only prevent default if validation fails
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.add('was-validated');
+                console.log('⚠️ Form validation failed');
+                return false;
+            }
+            
+            // If validation passes, let Netlify handle the submission
+            console.log('📧 Hometrainer form submitted to Netlify');
+            return true;
+        });
+        
+        // Mobile dropdown fix
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const dropdown = event.target.nextElementSibling;
+            const isCurrentlyOpen = dropdown && dropdown.classList.contains('show');
+            
+            // Close all dropdowns first
+            const allDropdowns = document.querySelectorAll('.dropdown-menu');
+            allDropdowns.forEach(function(dropdown) {
+                dropdown.classList.remove('show');
+            });
+            
+            // If the clicked dropdown was not open, open it
+            if (dropdown && !isCurrentlyOpen) {
+                dropdown.classList.add('show');
+            }
+        }
+        
+        // Check if device is mobile
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        }
+        
+        const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+        dropdownToggles.forEach(function(toggle) {
+            // Only add custom handlers for mobile devices
+            if (isMobileDevice()) {
+                toggle.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    toggleDropdown(e);
+                });
+                
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleDropdown(e);
+                });
+            }
+        });
+        
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+        
+        document.addEventListener('touchstart', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

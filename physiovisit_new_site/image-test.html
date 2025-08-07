@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test - PhysioVisit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .image-test {
+            border: 2px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .image-test img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        .path {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .status {
+            font-weight: bold;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>PhysioVisit - Image Loading Test</h1>
+    <p>Deze pagina test of alle afbeeldingen correct laden.</p>
+
+    <div class="image-test">
+        <h3>Logo</h3>
+        <div class="path">assets/img/physiovisit logo.png</div>
+        <img src="assets/img/physiovisit logo.png" alt="PhysioVisit Logo" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-logo"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Homepage Hero</h3>
+        <div class="path">assets/img/physiovisit homepage pic.png</div>
+        <img src="assets/img/physiovisit homepage pic.png" alt="Homepage Hero" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-hero"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Kinesitherapie</h3>
+        <div class="path">assets/img/kinesitherapie.jpg</div>
+        <img src="assets/img/kinesitherapie.jpg" alt="Kinesitherapie" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-kine"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Neurologie (oude naam)</h3>
+        <div class="path">assets/img/neurologie.jpeg</div>
+        <img src="assets/img/neurologie.jpeg" alt="Neurologie" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-neuro-old"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Neurologie (nieuwe naam)</h3>
+        <div class="path">assets/img/Neurologie nieuw.jpg</div>
+        <img src="assets/img/Neurologie nieuw.jpg" alt="Neurologie Nieuw" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-neuro-new"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Gangrevalidatie (oude naam)</h3>
+        <div class="path">assets/img/gangrevalidatie.jpeg</div>
+        <img src="assets/img/gangrevalidatie.jpeg" alt="Gangrevalidatie" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-gang-old"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Gangrevalidatie (nieuwe naam)</h3>
+        <div class="path">assets/img/gangrevalidatie nieuw.jpg</div>
+        <img src="assets/img/gangrevalidatie nieuw.jpg" alt="Gangrevalidatie Nieuw" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-gang-new"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Orthopedie</h3>
+        <div class="path">assets/img/orthopedie photo.jpg</div>
+        <img src="assets/img/orthopedie photo.jpg" alt="Orthopedie" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-ortho"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Timothy</h3>
+        <div class="path">assets/img/Timothy Assi Profiel Foto.jpeg</div>
+        <img src="assets/img/Timothy Assi Profiel Foto.jpeg" alt="Timothy" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-timothy"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Charlotte</h3>
+        <div class="path">assets/img/Charlotte Profiel Foto.jpeg</div>
+        <img src="assets/img/Charlotte Profiel Foto.jpeg" alt="Charlotte" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-charlotte"></div>
+    </div>
+
+    <div class="image-test">
+        <h3>Kinetec</h3>
+        <div class="path">assets/img/Kinetec.jpeg</div>
+        <img src="assets/img/Kinetec.jpeg" alt="Kinetec" onload="showStatus(this, 'success')" onerror="showStatus(this, 'error')">
+        <div class="status" id="status-kinetec"></div>
+    </div>
+
+    <script>
+        function showStatus(img, status) {
+            const statusDiv = img.nextElementSibling;
+            if (status === 'success') {
+                statusDiv.textContent = '✅ Afbeelding geladen!';
+                statusDiv.className = 'status success';
+                console.log('✅ Image loaded:', img.src);
+            } else {
+                statusDiv.textContent = '❌ Kan afbeelding niet laden';
+                statusDiv.className = 'status error';
+                console.error('❌ Image failed:', img.src);
+            }
+        }
+
+        // Count loaded vs failed images
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('img');
+            let loaded = 0;
+            let failed = 0;
+            
+            images.forEach(img => {
+                if (img.complete && img.naturalHeight !== 0) {
+                    loaded++;
+                } else {
+                    failed++;
+                }
+            });
+            
+            console.log(`📊 Image loading summary: ${loaded} loaded, ${failed} failed out of ${images.length} total`);
+        });
+    </script>
+</body>
+</html>

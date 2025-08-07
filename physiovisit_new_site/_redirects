@@ -1,0 +1,18 @@
+# Netlify Redirects File
+
+# Page redirects (clean URLs zonder .html extensie)
+/contact            /contact.html           200
+/contact/           /contact.html           200
+/gangrevalidatie    /gangrevalidatie.html   200
+/gangrevalidatie/   /gangrevalidatie.html   200
+
+# Form success redirects  
+/thankyou           /thankyou.html          200
+/thankyou/          /thankyou.html          200
+
+# Form submission success (alternative paths)
+/success            /thankyou.html          200
+/bedankt            /thankyou.html          200
+
+# Fallback for any missing pages
+/*                  /404.html               404

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebFetch(domain:physiovisit.be)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(zip:*)",
+      "Bash(rg:*)",
+      "Bash(mv:*)",
+      "Bash(cp:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"Processing: $file\")",
+      "Bash(done)",
+      "Bash(do sed -i 's/data-bs-toggle=\"\"dropdown\"\" aria-expanded=\"\"false\"\">/data-bs-toggle=\"\"dropdown\"\" aria-expanded=\"\"false\"\" onclick=\"\"toggleDropdown(event)\"\">/g' \"$file\")",
+      "Bash(do sed -i 's|</body>|    <script>\\n    function toggleDropdown(event) {\\n        event.preventDefault();\\n        const dropdown = event.target.nextElementSibling;\\n        if (dropdown) {\\n            dropdown.classList.toggle(\"\"show\"\");\\n        }\\n    }\\n    \\n    document.addEventListener(\"\"click\"\", function(event) {\\n        const dropdowns = document.querySelectorAll(\"\".dropdown-menu\"\");\\n        dropdowns.forEach(function(dropdown) {\\n            if (!dropdown.parentElement.contains(event.target)) {\\n                dropdown.classList.remove(\"\"show\"\");\\n            }\\n        });\\n    });\\n    </script>\\n    \\n</body>|g' \"$file\")",
+      "Bash(do sed -i 's/onclick=\"\"toggleDropdown(event)\"\"//g' \"$file\")",
+      "Bash(grep:*)",
+      "Bash(do tail -5 \"$file\")",
+      "Bash(echo:*)",
+      "Bash(do)",
+      "Bash(sed:*)",
+      "Bash(if grep -q \"toggleDropdown\" \"$file\")",
+      "Bash(! grep -q \"isCurrentlyOpen\" \"$file\")",
+      "Bash(then)",
+      "Bash(fi)",
+      "Bash(curl:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,8 @@
+Placeholder afbeeldingen voor PhysioVisit website:
+
+- logo.png: PhysioVisit logo voor in de navbar
+- kine.jpg: Afbeelding voor kinesitherapie sectie
+- verhuur.jpg: Afbeelding voor verhuur sectie  
+- gangrevalidatie.jpg: Afbeelding voor gangrevalidatie pagina
+
+Deze bestanden moeten handmatig toegevoegd worden door de gebruiker.

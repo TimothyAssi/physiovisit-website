@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangrevalidatie - PhysioVisit</title>
+    <meta name="description" content="Gangrevalidatie bij PhysioVisit. Herstel van vertrouwen en stabiliteit bij het stappen na operatie of val.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #7C2D12 0%, #92400E 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="../assets/img/physiovisit logo.png" alt="PhysioVisit Logo" class="h-10 w-10 mr-3">
+                        <h1 class="text-2xl font-bold text-blue-900">PhysioVisit</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="/kinesitherapie/" class="text-blue-600 font-medium">Kinesitherapie</a>
+                    <a href="/verhuur/" class="text-gray-700 hover:text-blue-600 font-medium">Verhuur</a>
+                    <a href="/contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="/kinesitherapie/" class="block px-3 py-2 text-base font-medium text-blue-600">Kinesitherapie</a>
+                    <a href="/verhuur/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Verhuur</a>
+                    <a href="/contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="text-sm">
+                <a href="/" class="text-blue-600 hover:underline">Home</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <a href="/kinesitherapie/" class="text-blue-600 hover:underline">Kinesitherapie</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <span class="text-gray-700">Gangrevalidatie</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl font-bold mb-4">Gangrevalidatie</h1>
+                    <p class="text-xl opacity-90 mb-6">Na een operatie of val is stappen soms niet vanzelfsprekend. Bij PhysioVisit helpen we je stap voor stap om je vertrouwen en stabiliteit terug te winnen.</p>
+                    <a href="/contact.html" class="bg-white text-orange-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">
+                        Maak een afspraak
+                    </a>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-8">
+                        <img src="../assets/img/gangrevalidatie.jpeg" alt="Gangrevalidatie" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Waarom Gangrevalidatie?</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Het lopen is een complexe activiteit die na een operatie, val, of neurologische aandoening 
+                        vaak verstoord raakt. Gangrevalidatie helpt bij het hertrainen van een veilig en efficiënt 
+                        looppatroon, waardoor u weer vertrouwen krijgt in uw mobiliteit.
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Onze Specialisaties</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-orange-900 mb-3">Individuele Ganganalyse</h4>
+                            <p class="text-gray-700">Uitgebreide evaluatie van uw looppatroon om specifieke problemen te identificeren en een persoonlijk behandelplan op te stellen.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-blue-900 mb-3">Training met Loophulpmiddelen</h4>
+                            <p class="text-gray-700">Professionele begeleiding bij het gebruik van rollator, krukken of andere hulpmiddelen voor veilig en efficiënt lopen.</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-green-900 mb-3">Oefeningen voor Balans en Coördinatie</h4>
+                            <p class="text-gray-700">Gerichte oefeningen om evenwicht, stabiliteit en bewegingscoördinatie te verbeteren voor zelfverzekerd stappen.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-purple-900 mb-3">Focus op Zelfzeker Stappen</h4>
+                            <p class="text-gray-700">Herstel van vertrouwen in het dagelijks leven door oefening van praktische situaties zoals traplopen en obstakels overwinnen.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Behandelproces</h3>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Intake en Evaluatie</h4>
+                                <p class="text-gray-600">Uitgebreide anamnese en ganganalyse om uw specifieke behoeften te identificeren</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Persoonlijk Behandelplan</h4>
+                                <p class="text-gray-600">Op maat gemaakt programma met realistische doelen en tijdslijn</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Progressieve Training</h4>
+                                <p class="text-gray-600">Geleidelijke opbouw van moeilijkheid en complexiteit in de oefeningen</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Evaluatie en Nazorg</h4>
+                                <p class="text-gray-600">Regelmatige evaluatie van vooruitgang en nazorg voor duurzame resultaten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="bg-orange-50 p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-bold text-orange-900 mb-4">Voor Wie?</h3>
+                        <ul class="space-y-2 text-orange-800">
+                            <li>• Na heup- of knieoperatie</li>
+                            <li>• Na een val met blessures</li>
+                            <li>• Neurologische aandoeningen</li>
+                            <li>• Langdurige immobilisatie</li>
+                            <li>• Evenwichtsproblemen</li>
+                            <li>• Angst voor vallen</li>
+                            <li>• Ouderen met mobiliteitsproblemen</li>
+                            <li>• Sporters na blessure</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-bold text-green-900 mb-4">Resultaten</h3>
+                        <ul class="space-y-2 text-green-800">
+                            <li>✓ Verbeterde balans</li>
+                            <li>✓ Zelfverzekerder lopen</li>
+                            <li>✓ Minder angst voor vallen</li>
+                            <li>✓ Verhoogde mobiliteit</li>
+                            <li>✓ Betere kwaliteit van leven</li>
+                            <li>✓ Zelfstandiger functioneren</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-900 mb-4">Thuisbehandeling</h3>
+                        <p class="text-blue-800 mb-4">
+                            Gangrevalidatie is ook mogelijk aan huis in de regio Grimbergen - Strombeek - Humbeek - Beigem - Koningslo.
+                        </p>
+                        <ul class="space-y-2 text-blue-700 text-sm">
+                            <li>• Vertrouwde omgeving</li>
+                            <li>• Praktische situaties</li>
+                            <li>• Familie kan meekijken</li>
+                            <li>• Geen reisbarrieres</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-orange-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Klaar om weer zelfverzekerd te stappen?</h2>
+            <p class="text-xl mb-8 opacity-90">Maak een afspraak voor gangrevalidatie en ontdek hoe wij u kunnen helpen</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/contact.html" class="bg-white text-orange-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    Maak een afspraak
+                </a>
+                <a href="tel:0474878021" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-900 transition duration-300">
+                    Bel Direct
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PhysioVisit</h3>
+                    <p class="text-gray-400">Professionele kinesitherapie en verhuur van revalidatieapparatuur</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Diensten</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/kinesitherapie/orthopedie.html" class="hover:text-white">Orthopedie</a></li>
+                        <li><a href="/kinesitherapie/neurologie.html" class="hover:text-white">Neurologie</a></li>
+                        <li><a href="/kinesitherapie/gangrevalidatie.html" class="hover:text-white">Gangrevalidatie</a></li>
+                        <li><a href="/verhuur/kinetec.html" class="hover:text-white">Kinetec Verhuur</a></li>
+                        <li><a href="/verhuur/hometrainer.html" class="hover:text-white">Hometrainers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 Kine: Kasteelstraat 89, Strombeek-Bever</li>
+                        <li>📍 Verhuur: Gaston Devoswijk 21, Grimbergen</li>
+                        <li>📞 0474 87 80 21</li>
+                        <li>✉️ info@physiovisit.be</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Openingsuren</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Ma-Vr: 9:00 - 17:00</li>
+                        <li>Za & Zo: Gesloten</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PhysioVisit. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
