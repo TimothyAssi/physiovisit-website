@@ -30,9 +30,9 @@
         .hero-content{z-index:2;position:relative}
         .hero-content h1{font-size:3rem;margin:0 0 20px;text-shadow:2px 2px 4px rgba(0,0,0,.7);font-weight:700;line-height:1.2}
         .hero-content p{font-size:1.3rem;margin:0 0 30px;opacity:.95;text-shadow:1px 1px 2px rgba(0,0,0,.5)}
-        .btn{display:inline-block;padding:15px 30px;background:#A3BFFA;color:#333;text-decoration:none;border-radius:8px;font-weight:600;margin:10px;transition:all .3s ease;border:2px solid transparent}
-        .btn-accent{background:#D4A373;color:#fff;border-color:#D4A373}
-        .btn-primary{background:#A3BFFA;color:#333;border-color:#A3BFFA}
+        .btn{display:inline-block;padding:12px 24px;background:#A3BFFA;color:#333;text-decoration:none;border-radius:8px;font-weight:600;margin:10px;transition:all .3s ease;border:2px solid transparent;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+        .btn-accent{background:#D4A373 !important;color:#fff !important;border-color:#D4A373 !important}
+        .btn-primary{background:#A3BFFA !important;color:#333 !important;border-color:#A3BFFA !important}
         .btn-lg{padding:15px 30px;font-size:1.1rem}
         img{max-width:100%;height:auto;display:block}
         .service-image-container{width:100%;height:480px;overflow:hidden;border-radius:10px;margin-bottom:24px;position:relative;background:#f8f9fa}
@@ -44,11 +44,13 @@
         h2{font-size:2.5rem}h3{font-size:1.8rem}
         .mission-banner{padding:80px 0;position:relative;color:#fff;text-align:center}
         @media (max-width:768px){
-            .hero-section{min-height:80vh;padding:150px 0 80px}
-            .hero-content h1{font-size:2rem}
-            .hero-content p{font-size:1.1rem}
-            .btn{display:block;margin:10px 0;text-align:center}
-            .section{padding:60px 0}
+            .hero-section{min-height:100vh;padding:120px 0 60px;contain:layout style paint}
+            .hero-content{min-height:300px !important;padding:20px 0}
+            .hero-content h1{font-size:2.2rem;margin-bottom:15px;line-height:1.3}
+            .hero-content p{font-size:1.1rem;margin-bottom:25px}
+            .btn{display:block;margin:8px 0;text-align:center;width:100%;max-width:280px;margin-left:auto;margin-right:auto}
+            .section{padding:50px 0}
+            .service-image-container{height:300px}
         }
     </style>
     
@@ -57,6 +59,15 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all">
+    
+    <!-- Font display optimization -->
+    <style>
+        @font-face {
+            font-family: 'Roboto-Fallback';
+            src: local('Arial'), local('Helvetica');
+            font-display: swap;
+        }
+    </style>
     
     <!-- Noscript fallback -->
     <noscript>
@@ -72,43 +83,51 @@
     <meta name="theme-color" content="#6D8299">
     
     
-    <!-- Google Tag Manager -->
+    <!-- Deferred tracking for better performance -->
     <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WW27NH9Q');
-    </script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY8Q6GZEVY"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NY8Q6GZEVY', {
-        send_page_view: true,
-        cookie_flags: 'SameSite=None;Secure',
-        anonymize_ip: true
+    // Defer tracking until page is interactive
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            // Google Tag Manager
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WW27NH9Q');
+        }, 1000);
+        
+        setTimeout(function() {
+            // Google Analytics 4  
+            var gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NY8Q6GZEVY';
+            document.head.appendChild(gtagScript);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NY8Q6GZEVY', {
+                send_page_view: true,
+                cookie_flags: 'SameSite=None;Secure',
+                anonymize_ip: true
+            });
+        }, 1500);
+        
+        setTimeout(function() {
+            // Facebook Pixel
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 'FACEBOOK_PIXEL_ID');
+            fbq('track', 'PageView');
+        }, 2000);
     });
     </script>
-    
-    <!-- Facebook Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'FACEBOOK_PIXEL_ID');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_CODE" />
@@ -380,7 +399,7 @@
         <div class="hero-bg-overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="hero-content" style="min-height: 200px;">
+                <div class="hero-content" style="min-height: 350px; display: flex; flex-direction: column; justify-content: center;">
                     <h1>Ontdek het gemak van kinesitherapie aan huis</h1>
                     <p class="lead">Kinesitherapie aan huis & revalidatiemateriaal met zorg geleverd in heel België.</p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
@@ -508,7 +527,7 @@
                 <div class="col-md-6">
                     <div class="service-card">
                         <div class="service-image-container">
-                            <img src="assets/img/neurologie.jpeg?v=6" alt="Neurologische kinesitherapie aan huis" class="service-image" loading="lazy" decoding="async" style="object-position: center 60%;" width="400" height="480" onerror="this.src='assets/img/Neurologie nieuw.jpg';">
+                            <img src="assets/img/neurologie.jpeg?v=7" alt="Neurologische kinesitherapie aan huis" class="service-image" loading="lazy" decoding="async" style="object-position: center 60%; contain: layout;" width="400" height="480" onerror="this.src='assets/img/Neurologie nieuw.jpg';">
                         </div>
                         <div class="service-content">
                             <h3>Kinesitherapie aan Huis</h3>
@@ -533,7 +552,7 @@
                 <div class="col-md-6">
                     <div class="service-card">
                         <div class="service-image-container">
-                            <img src="assets/img/Kinetec.jpeg?v=6" alt="Kinetec apparatuur verhuur" class="service-image" loading="lazy" decoding="async" style="object-position: center 25%;" width="400" height="480" onerror="this.src='assets/img/gangrevalidatie nieuw.jpg';">
+                            <img src="assets/img/Kinetec.jpeg?v=7" alt="Kinetec apparatuur verhuur" class="service-image" loading="lazy" decoding="async" style="object-position: center 25%; contain: layout;" width="400" height="480" onerror="this.src='assets/img/gangrevalidatie nieuw.jpg';">
                         </div>
                         <div class="service-content">
                             <h3>Apparatuur Verhuur - Heel België</h3>
@@ -1128,6 +1147,31 @@
                 });
             }
         });
+        
+        // Advanced performance optimizations
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.transform = 'translateZ(0)'; // GPU acceleration
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.service-image').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        
+        // Preload critical resources on mobile
+        if (window.innerWidth <= 768) {
+            const preloadLink = document.createElement('link');
+            preloadLink.rel = 'prefetch';
+            preloadLink.href = 'assets/img/Kinetec.jpeg';
+            document.head.appendChild(preloadLink);
+        }
         
         document.addEventListener('click', function(event) {
             const dropdowns = document.querySelectorAll('.dropdown-menu');
