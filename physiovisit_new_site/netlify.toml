@@ -5,7 +5,7 @@
 [forms]
   accept = ["contact", "kinetec-rental", "hometrainer-rental"]
 
-# Headers optimized for Google Ads crawler compatibility
+# Optimized headers for performance
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,5 +13,48 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=3600"
     X-Robots-Tag = "index, follow"
+
+# Long cache for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images for 1 year
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache CSS and JS for 1 year
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Short cache for HTML
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
