@@ -31,8 +31,8 @@
         .hero-content h1{font-size:3rem;margin:0 0 20px;text-shadow:2px 2px 4px rgba(0,0,0,.7);font-weight:700;line-height:1.2}
         .hero-content p{font-size:1.3rem;margin:0 0 30px;opacity:.95;text-shadow:1px 1px 2px rgba(0,0,0,.5)}
         .btn{display:inline-block;padding:12px 24px;background:#A3BFFA;color:#333;text-decoration:none;border-radius:8px;font-weight:600;margin:10px;transition:all .3s ease;border:2px solid transparent;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-        .btn-accent{background:#D4A373 !important;color:#fff !important;border-color:#D4A373 !important}
-        .btn-primary{background:#A3BFFA !important;color:#333 !important;border-color:#A3BFFA !important}
+        .btn-accent{background:#D4A373 !important;color:#fff !important;border-color:#D4A373 !important;opacity:1 !important}
+        .btn-primary{background:#A3BFFA !important;color:#333 !important;border-color:#A3BFFA !important;opacity:1 !important}
         .btn-lg{padding:15px 30px;font-size:1.1rem}
         img{max-width:100%;height:auto;display:block}
         .service-image-container{width:100%;height:480px;overflow:hidden;border-radius:10px;margin-bottom:24px;position:relative;background:#f8f9fa}
@@ -44,13 +44,14 @@
         h2{font-size:2.5rem}h3{font-size:1.8rem}
         .mission-banner{padding:80px 0;position:relative;color:#fff;text-align:center}
         @media (max-width:768px){
-            .hero-section{min-height:100vh;padding:120px 0 60px;contain:layout style paint}
+            .hero-section{min-height:100vh;padding:120px 0 60px;contain:layout style paint;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) !important}
             .hero-content{min-height:300px !important;padding:20px 0}
-            .hero-content h1{font-size:2.2rem;margin-bottom:15px;line-height:1.3}
-            .hero-content p{font-size:1.1rem;margin-bottom:25px}
+            .hero-content h1{font-size:2.2rem;margin-bottom:15px;line-height:1.3;color:#fff !important;text-shadow:2px 2px 4px rgba(0,0,0,.8) !important}
+            .hero-content p{font-size:1.1rem;margin-bottom:25px;color:#fff !important;text-shadow:1px 1px 2px rgba(0,0,0,.6) !important}
             .btn{display:block;margin:8px 0;text-align:center;width:100%;max-width:280px;margin-left:auto;margin-right:auto}
             .section{padding:50px 0}
             .service-image-container{height:300px}
+            .service-image{display:block !important;visibility:visible !important}
         }
     </style>
     
@@ -527,7 +528,7 @@
                 <div class="col-md-6">
                     <div class="service-card">
                         <div class="service-image-container">
-                            <img src="assets/img/neurologie.jpeg?v=7" alt="Neurologische kinesitherapie aan huis" class="service-image" loading="lazy" decoding="async" style="object-position: center 60%; contain: layout;" width="400" height="480" onerror="this.src='assets/img/Neurologie nieuw.jpg';">
+                            <img src="assets/img/neurologie.jpeg?v=8" alt="Neurologische kinesitherapie aan huis" class="service-image" loading="lazy" decoding="async" style="object-position: center 60%; display: block !important; visibility: visible !important;" width="400" height="480" onerror="this.src='assets/img/Neurologie nieuw.jpg';">
                         </div>
                         <div class="service-content">
                             <h3>Kinesitherapie aan Huis</h3>
@@ -552,7 +553,7 @@
                 <div class="col-md-6">
                     <div class="service-card">
                         <div class="service-image-container">
-                            <img src="assets/img/Kinetec.jpeg?v=7" alt="Kinetec apparatuur verhuur" class="service-image" loading="lazy" decoding="async" style="object-position: center 25%; contain: layout;" width="400" height="480" onerror="this.src='assets/img/gangrevalidatie nieuw.jpg';">
+                            <img src="assets/img/Kinetec.jpeg?v=8" alt="Kinetec apparatuur verhuur" class="service-image" loading="lazy" decoding="async" style="object-position: center 25%; display: block !important; visibility: visible !important;" width="400" height="480" onerror="this.src='assets/img/gangrevalidatie nieuw.jpg';">
                         </div>
                         <div class="service-content">
                             <h3>Apparatuur Verhuur - Heel België</h3>
