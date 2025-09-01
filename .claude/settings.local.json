@@ -28,7 +28,8 @@
       "Bash(curl:*)",
       "WebFetch(domain:developers.google.com)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
