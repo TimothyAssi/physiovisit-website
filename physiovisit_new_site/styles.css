@@ -891,12 +891,12 @@ img[src=""] {
 }
 
 .service-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
     object-position: center center;
     transition: transform 0.3s ease;
-    display: block;
+    display: block !important;
 }
 
 .service-image:hover {
