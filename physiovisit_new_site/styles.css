@@ -476,17 +476,19 @@ h3 {
 
 .team-photo-round {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 8px 25px var(--shadow-light);
 }
 
 .team-photo-round img {
-    width: 100%;
-    height: 100%;
+    width: 180px !important;
+    height: 180px !important;
     object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
 }
 
 /* Footer - Clean Professional */
@@ -1020,9 +1022,13 @@ img[src=""] {
 }
 
 .team-photo-round img {
-    width: 100%;
-    height: 100%;
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
     object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
 }
 
 /* Responsive adjustments */
