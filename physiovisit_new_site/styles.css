@@ -1,8 +1,7 @@
 /* PhysioVisit Website CSS - Inspired by PhysioCompany.nl */
 
 /* Import Google Fonts - optimized */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
-
+/* Google Fonts loaded via <link> tag for performance */
 /* Updated Color Scheme for Better Warmth and Contrast - Medical Friendly */
 :root {
     --primary-warm-grey: #6D8299;

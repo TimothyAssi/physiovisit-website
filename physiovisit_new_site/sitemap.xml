@@ -1,91 +1,293 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.physiovisit.be/</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.physiovisit.be/assets/img/physiovisit%20logo.png</image:loc>
-      <image:title>PhysioVisit Logo - Kinesitherapie aan Huis</image:title>
-      <image:caption>PhysioVisit - Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://www.physiovisit.be/assets/img/homepage.png</image:loc>
-      <image:title>PhysioVisit Homepage Banner</image:title>
+      <image:title>PhysioVisit Homepage - Kinesitherapie aan Huis</image:title>
+      <image:caption>Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur in Grimbergen</image:caption>
     </image:image>
-  </url>
-  <url>
-    <loc>https://www.physiovisit.be/contact.html</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.physiovisit.be/assets/img/contact.png</image:loc>
-      <image:title>PhysioVisit Contact</image:title>
+      <image:loc>https://www.physiovisit.be/assets/img/physiovisit%20logo.png</image:loc>
+      <image:title>PhysioVisit Logo</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.physiovisit.be/kinesitherapie.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.physiovisit.be/assets/img/Kineaanhuis.jpeg</image:loc>
       <image:title>Kinesitherapie aan Huis</image:title>
+      <image:caption>Professionele kinesitherapiebehandeling bij u thuis</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://www.physiovisit.be/kinetec-huren.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.physiovisit.be/assets/img/Kinetec.jpeg</image:loc>
       <image:title>Kinetec CPM Machine Verhuur</image:title>
+      <image:caption>Kinetec knierevalidatie apparaat te huur</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://www.physiovisit.be/hometrainer-huren.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/hometrainer%20banner.png</image:loc>
+      <image:title>Hometrainer Verhuur</image:title>
+      <image:caption>Hometrainer en fietstoestel voor thuisrevalidatie</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/contact.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/contact.png</image:loc>
+      <image:title>Contact PhysioVisit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/ons-team.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/ik%20en%20charlotte.jpg</image:loc>
+      <image:title>Team PhysioVisit</image:title>
+      <image:caption>Timothy en Charlotte - kinesitherapeuten aan huis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/spoed-kinesitherapie-grimbergen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.physiovisit.be/kinesitherapie-grimbergen.html</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.physiovisit.be/kinesitherapie-humbeek.html</loc>
-    <lastmod>2025-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.physiovisit.be/kinesitherapie-koningslo.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.physiovisit.be/kinesitherapie-strombeek-bever.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.physiovisit.be/normale-hometrainer.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <loc>https://www.physiovisit.be/kinesitherapie-humbeek.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-koningslo.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-beigem.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-aan-huis-grimbergen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-aan-huis-strombeek-bever.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-aan-huis-humbeek.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-aan-huis-koningslo.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie-aan-huis-beigem.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-verhuur-knie-revalidatie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-knieprotheses.html</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.physiovisit.be/zetelfiets.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <loc>https://www.physiovisit.be/kinetec-huren-artroscopieen.html</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-meniscusoperaties.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-ligamentreparaties.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-kniefracturen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-kraakbeenreparaties.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-synovectomie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-stijfheid-na-immobilisatie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-osteochondritis-dissecans.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinetec-huren-post-traumatische-kniestijfheid.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/normale-hometrainer.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/electrische-zetelfiets.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/electrische%20zetelfiets.webp</image:loc>
+      <image:title>Elektrische Zetelfiets</image:title>
+      <image:caption>Elektrische zetelfiets voor revalidatie</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/zetelfiets.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.physiovisit.be/assets/img/zetelfiets.png</image:loc>
+      <image:title>Zetelfiets</image:title>
+      <image:caption>Zetelfiets voor zachte beentraining</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/blog/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/blog/5-voordelen-kinesitherapie-aan-huis-vs-praktijkbezoek.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/blog/kinetec-cpm-machine-complete-gids-knie-revalidatie-thuis.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/blog/postoperatieve-knie-revalidatie-wat-verwachten-hoe-versnellen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie/orthopedie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie/neurologie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/kinesitherapie/gangrevalidatie.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/thankyou.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.physiovisit.be/404.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 </urlset>

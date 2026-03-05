@@ -1,42 +1,42 @@
-# Robots.txt for PhysioVisit - Kinesitherapie aan Huis & Kinetec Verhuur
-# Updated: January 2025
+# Robots.txt for PhysioVisit - Kinesitherapie aan Huis & Revalidatieapparatuur
+# Updated: March 2026
 
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Explicitly allow important SEO crawlers
+# Google crawlers
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Googlebot-Image
-Allow: /
+Allow: /assets/img/
 
 User-agent: Googlebot-News
-Allow: /
+Allow: /blog/
 
 User-agent: Googlebot-Video
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
 
-# Allow Google Ads and Marketing crawlers
+# Google Ads and Marketing crawlers
 User-agent: AdsBot-Google
 Allow: /
 
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
-User-agent: AdsBot-Google-Mobile-Apps
-Allow: /
-
 User-agent: Mediapartners-Google
 Allow: /
 
-# Allow Facebook crawlers for social sharing
+# Social media crawlers
 User-agent: facebookexternalhit
 Allow: /
 
@@ -46,18 +46,23 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Block unnecessary files and folders
+# Block development/test files
 Disallow: /debug-images.js
 Disallow: /image-test.html
+Disallow: /index-old.html
+Disallow: /index-performance-optimized.html
+Disallow: /*.py$
 Disallow: /*.zip$
 Disallow: /*.md$
 Disallow: /windsurf_deployment.yaml
+Disallow: /.claude/
 
-# Sitemap locations
+# Block source CSS/JS (only minified should be indexed)
+Disallow: /styles.css
+Disallow: /script.js
+
+# Sitemap
 Sitemap: https://www.physiovisit.be/sitemap.xml
 
-# Crawl-delay to be respectful to server resources
-Crawl-delay: 1
-
-# Host directive (preferred domain)
+# Preferred domain
 Host: https://www.physiovisit.be
