@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="../assets/img/Neurologie nieuw.jpg" as="image">
     <title>Neurologische Kinesitherapie aan Huis | PhysioVisit</title>
     <meta name="description" content="Neurologische kinesitherapie aan huis in Grimbergen. Behandeling bij CVA, Parkinson en MS door ervaren therapeuten. Bel 0474 87 80 21.">
     <link rel="canonical" href="https://www.physiovisit.be/kinesitherapie/neurologie.html">
@@ -29,12 +30,14 @@
     <meta name="twitter:title" content="Neurologische Kinesitherapie aan Huis | PhysioVisit">
     <meta name="twitter:description" content="Neurologische kinesitherapie aan huis in Grimbergen. Behandeling bij CVA, Parkinson en MS door ervaren therapeuten. Bel 0474 87 80 21.">
     <meta name="twitter:image" content="https://www.physiovisit.be/assets/img/homepage.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #10B981 0%, #059669 100%); }
-    </style>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../styles.min.css">
 
 <script type="application/ld+json">
 {
@@ -108,173 +111,264 @@
 }
 </script>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-900">PhysioVisit</a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="/kinesitherapie/" class="text-blue-600 font-medium">Kinesitherapie</a>
-                    <a href="/gangrevalidatie.html" class="text-gray-700 hover:text-blue-600 font-medium">Gangrevalidatie</a>
-                    <a href="/kinetec-huren.html" class="text-gray-700 hover:text-blue-600 font-medium">Verhuur</a>
-                    <a href="/contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/img/physiovisit logo.png" alt="PhysioVisit Logo" width="45" height="45" class="me-2"
+                     onerror="this.style.display='none';">
+                <span>PhysioVisit</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../kinesitherapie.html">Kinesitherapie aan Huis</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="hurenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Huren
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="hurenDropdown">
+                            <li><a class="dropdown-item" href="../kinetec-huren.html">Kinetec Huren</a></li>
+                            <li><a class="dropdown-item" href="../hometrainer-huren.html">Hometrainer Huren</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ons-team.html">Ons Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="bg-gray-100 py-4">
-        <div class="max-w-6xl mx-auto px-4">
-            <nav class="text-sm">
-                <a href="/" class="text-blue-600 hover:underline">Home</a>
-                <span class="mx-2 text-gray-500">/</span>
-                <a href="/kinesitherapie/" class="text-blue-600 hover:underline">Kinesitherapie</a>
-                <span class="mx-2 text-gray-500">/</span>
-                <span class="text-gray-700">Neurologie</span>
-            </nav>
-        </div>
-    </div>
-
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h1 class="text-4xl font-bold mb-4">Neurologische Kinesitherapie</h1>
-                    <p class="text-xl opacity-90 mb-6">Gespecialiseerde behandeling voor neurologische aandoeningen en herstel van bewegingsfuncties</p>
-                    <a href="/contact.html" class="bg-white text-green-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">
-                        Afspraak Maken
-                    </a>
-                </div>
-                <div class="text-center">
-                    <div class="bg-white bg-opacity-20 rounded-lg p-8">
-                        <svg class="w-32 h-32 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/img/Neurologie nieuw.jpg') center/cover no-repeat, linear-gradient(135deg, #6D8299, #A3BFFA);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1 id="bannerText">Neurologische Kinesitherapie</h1>
+                    <p class="lead" id="sloganText">Gespecialiseerde behandeling voor neurologische aandoeningen en herstel van bewegingsfuncties</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="../contact.html" class="btn btn-accent btn-lg">
+                            <i class="bi bi-calendar-plus"></i>Maak Afspraak
+                        </a>
+                        <a href="tel:0474878021" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone"></i>Bel Direct
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Breadcrumb -->
+    <section class="section-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../kinesitherapie.html">Kinesitherapie</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Neurologie</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Main Content -->
-                <div class="md:col-span-2">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Wat is Neurologische Kinesitherapie?</h2>
-                    <p class="text-lg text-gray-700 mb-6">
-                        Neurologische kinesitherapie richt zich op de behandeling van patiënten met aandoeningen van het 
-                        centrale en perifere zenuwstelsel. Ons doel is het maximaliseren van functionele onafhankelijkheid 
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Wat is Neurologische Kinesitherapie?</h2>
+                    <p class="lead mb-4">
+                        Neurologische kinesitherapie richt zich op de behandeling van patiënten met aandoeningen van het
+                        centrale en perifere zenuwstelsel. Ons doel is het maximaliseren van functionele onafhankelijkheid
                         en het verbeteren van de kwaliteit van leven door middel van gespecialiseerde bewegingstherapie.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Onze Specialisaties</h3>
-                    <div class="grid md:grid-cols-2 gap-6 mb-8">
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold text-green-900 mb-3">Stroke Revalidatie</h4>
-                            <p class="text-gray-700">Herstel van beweging en functie na een beroerte, met focus op hertrainen van motorische vaardigheden.</p>
+                    <h3 class="mb-4">Onze Specialisaties</h3>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="icon-box h-100">
+                                <div class="icon-circle">
+                                    <i class="bi bi-heart-pulse"></i>
+                                </div>
+                                <h4>Stroke Revalidatie</h4>
+                                <p>Herstel van beweging en functie na een beroerte, met focus op hertrainen van motorische vaardigheden.</p>
+                            </div>
                         </div>
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold text-blue-900 mb-3">Evenwichtstherapie</h4>
-                            <p class="text-gray-700">Behandeling van evenwichtsstoornissen en valpreventie door gerichte oefeningen.</p>
+                        <div class="col-md-6">
+                            <div class="icon-box h-100">
+                                <div class="icon-circle green">
+                                    <i class="bi bi-bullseye"></i>
+                                </div>
+                                <h4>Evenwichtstherapie</h4>
+                                <p>Behandeling van evenwichtsstoornissen en valpreventie door gerichte oefeningen.</p>
+                            </div>
                         </div>
-                        <div class="bg-purple-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold text-purple-900 mb-3">Coördinatietherapie</h4>
-                            <p class="text-gray-700">Verbetering van motorische controle en bewegingscoördinatie.</p>
+                        <div class="col-md-6">
+                            <div class="icon-box h-100">
+                                <div class="icon-circle orange">
+                                    <i class="bi bi-arrows-move"></i>
+                                </div>
+                                <h4>Coordinatietherapie</h4>
+                                <p>Verbetering van motorische controle en bewegingscoordinatie.</p>
+                            </div>
                         </div>
-                        <div class="bg-orange-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold text-orange-900 mb-3">Spasticiteitsbehandeling</h4>
-                            <p class="text-gray-700">Management van spastische spieren en verbetering van bewegingskwaliteit.</p>
+                        <div class="col-md-6">
+                            <div class="icon-box h-100">
+                                <div class="icon-circle">
+                                    <i class="bi bi-activity"></i>
+                                </div>
+                                <h4>Spasticiteitsbehandeling</h4>
+                                <p>Management van spastische spieren en verbetering van bewegingskwaliteit.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Behandelingsmethoden</h3>
-                    <ul class="space-y-3 text-gray-700 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span><strong>Neuroplasticiteit training:</strong> Oefeningen gericht op hervorming van neurale verbindingen</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span><strong>Proprioceptieve training:</strong> Verbetering van lichaamsperceptie en ruimtelijk bewustzijn</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span><strong>Gangtraining:</strong> Hertrainen van lopen en mobiliteit</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span><strong>ADL training:</strong> Oefenen van dagelijkse activiteiten</span>
-                        </li>
+                    <h3 class="mb-4">Behandelingsmethoden</h3>
+                    <ul class="benefits-list mb-5">
+                        <li><strong>Neuroplasticiteit training:</strong> Oefeningen gericht op hervorming van neurale verbindingen</li>
+                        <li><strong>Proprioceptieve training:</strong> Verbetering van lichaamsperceptie en ruimtelijk bewustzijn</li>
+                        <li><strong>Gangtraining:</strong> Hertrainen van lopen en mobiliteit</li>
+                        <li><strong>ADL training:</strong> Oefenen van dagelijkse activiteiten</li>
                     </ul>
 
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Behandelresultaten</h3>
-                    <p class="text-gray-700 mb-4">
+                    <h3 class="mb-4">Behandelresultaten</h3>
+                    <p class="mb-3">
                         Onze neurologische kinesitherapie richt zich op meetbare verbeteringen in:
                     </p>
-                    <div class="grid md:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                            <span class="text-gray-700">Motorische functie</span>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                <span>Motorische functie</span>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                            <span class="text-gray-700">Evenwicht en stabiliteit</span>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                <span>Evenwicht en stabiliteit</span>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                            <span class="text-gray-700">Functionele onafhankelijkheid</span>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                <span>Functionele onafhankelijkheid</span>
+                            </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                            <span class="text-gray-700">Kwaliteit van leven</span>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                <span>Kwaliteit van leven</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sidebar -->
-                <div>
-                    <div class="bg-green-50 p-6 rounded-lg mb-8">
-                        <h3 class="text-xl font-bold text-green-900 mb-4">Aandoeningen die we behandelen</h3>
-                        <ul class="space-y-2 text-green-800">
-                            <li>• Cerebrovasculair accident (CVA)</li>
-                            <li>• Parkinson's ziekte</li>
-                            <li>• Multiple sclerose (MS)</li>
-                            <li>• Traumatisch hersenletsel</li>
-                            <li>• Perifere zenuwletsels</li>
-                            <li>• Guillain-Barré syndroom</li>
-                            <li>• Evenwichtsstoornissen</li>
-                            <li>• Ataxie</li>
-                            <li>• Polyneuropathie</li>
-                            <li>• Fasciculaties</li>
-                        </ul>
+                <div class="col-lg-4">
+                    <div class="card mb-4" style="background-color: var(--background-cream); border: none;">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">
+                                <i class="bi bi-clipboard2-pulse text-primary-custom me-2"></i>
+                                Aandoeningen die we behandelen
+                            </h3>
+                            <ul class="benefits-list">
+                                <li>Cerebrovasculair accident (CVA)</li>
+                                <li>Parkinson's ziekte</li>
+                                <li>Multiple sclerose (MS)</li>
+                                <li>Traumatisch hersenletsel</li>
+                                <li>Perifere zenuwletsels</li>
+                                <li>Guillain-Barre syndroom</li>
+                                <li>Evenwichtsstoornissen</li>
+                                <li>Ataxie</li>
+                                <li>Polyneuropathie</li>
+                                <li>Fasciculaties</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-blue-900 mb-4">Onze aanpak</h3>
-                        <ul class="space-y-2 text-blue-800">
-                            <li>✓ Uitgebreide neurologische evaluatie</li>
-                            <li>✓ Evidence-based behandeling</li>
-                            <li>✓ Multidisciplinaire samenwerking</li>
-                            <li>✓ Individuele doelstellingen</li>
-                            <li>✓ Progressieve oefentherapie</li>
-                            <li>✓ Familie-educatie</li>
-                        </ul>
+                    <div class="card" style="background-color: #f0f7f0; border: none;">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">
+                                <i class="bi bi-check-circle text-primary-custom me-2"></i>
+                                Onze aanpak
+                            </h3>
+                            <ul class="benefits-list">
+                                <li>Uitgebreide neurologische evaluatie</li>
+                                <li>Evidence-based behandeling</li>
+                                <li>Multidisciplinaire samenwerking</li>
+                                <li>Individuele doelstellingen</li>
+                                <li>Progressieve oefentherapie</li>
+                                <li>Familie-educatie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voordelen Thuisbehandeling -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Voordelen van Neurologische Thuisbehandeling</h2>
+                <p class="lead">Waarom kinesitherapie aan huis ideaal is voor neurologische revalidatie</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <i class="bi bi-house-heart"></i>
+                        </div>
+                        <h4>Vertrouwde Omgeving</h4>
+                        <p>Neurologische patiënten herstellen beter in een vertrouwde, veilige thuisomgeving.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle green">
+                            <i class="bi bi-car-front"></i>
+                        </div>
+                        <h4>Geen Verplaatsing</h4>
+                        <p>Essentieel voor patiënten met ernstige mobiliteits- of vervoersproblemen.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle orange">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4>Familie Betrokken</h4>
+                        <p>Familie kan meekijken en leren hoe zij het herstelproces kunnen ondersteunen.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <i class="bi bi-house-door"></i>
+                        </div>
+                        <h4>Functionele Training</h4>
+                        <p>Oefenen in uw eigen omgeving voor directe toepassing in het dagelijks leven.</p>
                     </div>
                 </div>
             </div>
@@ -282,65 +376,183 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-green-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Start uw neurologische revalidatie</h2>
-            <p class="text-xl mb-8 opacity-90">Onze ervaren neurologische kinesitherapeuten staan klaar om u te begeleiden</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/contact.html" class="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                    Afspraak Maken
-                </a>
-                <a href="tel:0474878021" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition duration-300">
-                    Bel Direct
-                </a>
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2>Start uw neurologische revalidatie</h2>
+                    <p class="lead mb-4">Onze ervaren neurologische kinesitherapeuten staan klaar om u te begeleiden</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn btn-accent btn-lg">
+                            <i class="bi bi-calendar-plus"></i>Maak Afspraak
+                        </a>
+                        <a href="tel:0474878021" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone"></i>Bel: 0474 87 80 21
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gerelateerde Diensten -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gerelateerde Diensten</h2>
+                <p class="lead">Ontdek onze andere specialisaties</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle mx-auto">
+                            <i class="bi bi-person-arms-up"></i>
+                        </div>
+                        <h4>Orthopedie</h4>
+                        <p>Specialistische behandeling van bot-, gewrichts- en spierklachten voor optimaal functioneel herstel.</p>
+                        <a href="orthopedie.html" class="btn btn-outline-primary">Meer Info</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle orange mx-auto">
+                            <i class="bi bi-person-walking"></i>
+                        </div>
+                        <h4>Gangrevalidatie</h4>
+                        <p>Specifieke training voor het verbeteren van looppatroon, evenwicht en mobiliteit.</p>
+                        <a href="gangrevalidatie.html" class="btn btn-outline-primary">Meer Info</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle green mx-auto">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h4>Kinetec Huren</h4>
+                        <p>Professionele Kinetec apparatuur huren voor knierevalidatie na een operatie.</p>
+                        <a href="../kinetec-huren.html" class="btn btn-outline-primary">Meer Info</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">PhysioVisit</h3>
-                    <p class="text-gray-400">Professionele kinesitherapie en verhuur van revalidatieapparatuur</p>
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>PhysioVisit</h5>
+                    <p>Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur in de regio Grimbergen.</p>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Diensten</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/kinesitherapie/orthopedie.html" class="hover:text-white">Orthopedie</a></li>
-                        <li><a href="/kinesitherapie/neurologie.html" class="hover:text-white">Neurologie</a></li>
-                        <li><a href="/gangrevalidatie.html" class="hover:text-white">Gangrevalidatie</a></li>
-                        <li><a href="/kinetec-huren.html" class="hover:text-white">Kinetec Verhuur</a></li>
-                        <li><a href="/hometrainer-huren.html" class="hover:text-white">Hometrainers</a></li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Kinesitherapie</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="orthopedie.html">Orthopedie</a></li>
+                        <li><a href="neurologie.html">Neurologie</a></li>
+                        <li><a href="gangrevalidatie.html">Gangrevalidatie</a></li>
+                        <li><a href="../kinetec-huren.html">Kinetec Verhuur</a></li>
+                        <li><a href="../contact.html">Afspraak Maken</a></li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>📍 Kine: Kasteelstraat 89, Strombeek-Bever</li>
-                        <li>📍 Verhuur: Gaston Devoswijk 21, Grimbergen</li>
-                        <li>📞 0474 87 80 21</li>
-                        <li>✉️ info@physiovisit.be</li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Werkgebied</h5>
+                    <ul class="list-unstyled">
+                        <li>Grimbergen</li>
+                        <li>Strombeek-Bever</li>
+                        <li>Humbeek</li>
+                        <li>Beigem</li>
+                        <li>Koningslo</li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Openingsuren</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Ma-Vr: 9:00 - 17:00</li>
-                        <li>Za & Zo: Gesloten</li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2"></i>Kasteelstraat 89, Strombeek-Bever</li>
+                        <li><i class="bi bi-telephone me-2"></i>0474 87 80 21</li>
+                        <li><i class="bi bi-envelope me-2"></i>info@physiovisit.be</li>
+                        <li><i class="bi bi-clock me-2"></i>Ma-Vr: 9:00 - 17:00</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PhysioVisit. Alle rechten voorbehouden.</p>
+
+            <hr class="my-4 border-secondary">
+
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 PhysioVisit. Alle rechten voorbehouden.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.min.js"></script>
+
+    <script>
+    function toggleDropdown(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const dropdown = event.target.nextElementSibling;
+        const isCurrentlyOpen = dropdown && dropdown.classList.contains('show');
+
+        // Close all dropdowns first
+        const allDropdowns = document.querySelectorAll('.dropdown-menu');
+        allDropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('show');
+            }
+        });
+
+        // If the clicked dropdown was not open, open it
+        if (dropdown && !isCurrentlyOpen) {
+            dropdown.classList.add('show');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+        dropdownToggles.forEach(function(toggle) {
+            if (isMobileDevice()) {
+            toggle.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                toggleDropdown(e);
+                }
+        });
+
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleDropdown(e);
+                }
+        });
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+                }
+        });
+            }
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+                }
+        });
+            }
+        });
+    });
+    </script>
     <script src="/assets/js/gads-tracking.js" defer></script>
 </body>
 </html>

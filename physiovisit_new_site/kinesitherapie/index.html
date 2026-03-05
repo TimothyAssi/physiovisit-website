@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/img/homepage.png" as="image">
+    <link rel="preload" href="../assets/img/Kineaanhuis.jpeg" as="image">
     <title>Kinesitherapie Diensten Grimbergen | PhysioVisit</title>
     <meta name="description" content="Kinesitherapie aan huis in Grimbergen: orthopedie, neurologie en gangrevalidatie. Ervaren therapeuten bij u thuis. Bel 0474 87 80 21.">
     <link rel="canonical" href="https://www.physiovisit.be/kinesitherapie/">
@@ -30,14 +30,14 @@
     <meta name="twitter:title" content="Kinesitherapie Diensten Grimbergen | PhysioVisit">
     <meta name="twitter:description" content="Kinesitherapie aan huis in Grimbergen: orthopedie, neurologie en gangrevalidatie. Ervaren therapeuten bij u thuis. Bel 0474 87 80 21.">
     <meta name="twitter:image" content="https://www.physiovisit.be/assets/img/homepage.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
-    </style>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../styles.min.css">
 
 <script type="application/ld+json">
 {
@@ -61,223 +61,397 @@
 }
 </script>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="/" class="flex items-center">
-                        <img src="../assets/img/physiovisit logo.png" alt="PhysioVisit Logo" class="h-10 w-10 mr-3" width="45" height="45">
-                        <h1 class="text-2xl font-bold text-blue-900">PhysioVisit</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="/kinesitherapie/" class="text-blue-600 font-medium">Kinesitherapie</a>
-                    <a href="/kinetec-huren.html" class="text-gray-700 hover:text-blue-600 font-medium">Verhuur</a>
-                    <a href="/contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="/kinesitherapie/" class="block px-3 py-2 text-base font-medium text-blue-600">Kinesitherapie</a>
-                    <a href="/kinetec-huren.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Verhuur</a>
-                    <a href="/contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/img/physiovisit logo.png" alt="PhysioVisit Logo" width="45" height="45" class="me-2"
+                     onerror="this.style.display='none';">
+                <span>PhysioVisit</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../kinesitherapie.html">Kinesitherapie aan Huis</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="hurenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Huren
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="hurenDropdown">
+                            <li><a class="dropdown-item" href="../kinetec-huren.html">Kinetec Huren</a></li>
+                            <li><a class="dropdown-item" href="../hometrainer-huren.html">Hometrainer Huren</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ons-team.html">Ons Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-16">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-4xl font-bold mb-4">Kinesitherapie Diensten</h1>
-            <p class="text-xl opacity-90">Professionele behandelingen voor optimaal herstel</p>
+    <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/img/Kineaanhuis.jpeg') center/cover no-repeat, linear-gradient(135deg, #6D8299, #A3BFFA);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1 id="bannerText">Kinesitherapie Diensten</h1>
+                    <p class="lead" id="sloganText">Professionele behandelingen voor optimaal herstel - bij u thuis in de regio Grimbergen</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="../contact.html" class="btn btn-accent btn-lg">
+                            <i class="bi bi-calendar-plus"></i>Maak Afspraak
+                        </a>
+                        <a href="tel:0474878021" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone"></i>Bel Direct
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Grid -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Onze Specialisaties</h2>
+                <p class="lead">Gerichte behandelingen voor diverse aandoeningen, aangepast aan uw individuele behoeften</p>
+            </div>
+
+            <div class="row g-4 mb-5">
                 <!-- Orthopedie Card -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl hover-scale">
-                    <div class="mb-6">
-                        <img src="../assets/img/orthopedie photo.jpg" alt="Orthopedische kinesitherapie - gewrichts- en spierrevalidatie aan huis" class="w-full h-48 object-cover rounded-lg" width="4096" height="3072" loading="lazy" decoding="async">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="../assets/img/orthopedie photo.jpg" alt="Orthopedische kinesitherapie - gewrichts- en spierrevalidatie aan huis" class="card-img-top" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h4 mb-3">
+                                <i class="bi bi-person-arms-up text-primary-custom me-2"></i>
+                                Orthopedische Kinesitherapie
+                            </h3>
+                            <p>Gespecialiseerde behandeling van gewrichten, spieren en botten. Perfect voor postoperatief herstel en blessurepreventie.</p>
+                            <ul class="benefits-list mb-4">
+                                <li>Postoperatieve revalidatie</li>
+                                <li>Gewrichtsbeweeglijkheid</li>
+                                <li>Spierversterkingstherapie</li>
+                                <li>Rugklachten behandeling</li>
+                                <li>Sportblessure herstel</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="orthopedie.html" class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i>Meer Details
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Orthopedische Kinesitherapie</h3>
-                    <p class="text-gray-700 mb-6">Gespecialiseerde behandeling van gewrichten, spieren en botten. Perfect voor postoperatief herstel en blessurepreventie.</p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>• Postoperatieve revalidatie</li>
-                        <li>• Gewrichtsbeweeglijkheid</li>
-                        <li>• Spierversterkingstherapie</li>
-                        <li>• Rugklachten behandeling</li>
-                        <li>• Sportblessure herstel</li>
-                    </ul>
-                    <a href="/kinesitherapie/orthopedie.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 inline-block">
-                        Meer Details
-                    </a>
                 </div>
 
                 <!-- Neurologie Card -->
-                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl hover-scale">
-                    <div class="mb-6">
-                        <img src="../assets/img/neurologie.jpeg" alt="Neurologische kinesitherapie - revalidatie na beroerte of hersenletsel" class="w-full h-48 object-cover rounded-lg" width="4032" height="3024" loading="lazy" decoding="async">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="../assets/img/Neurologie nieuw.jpg" alt="Neurologische kinesitherapie - revalidatie na beroerte of hersenletsel" class="card-img-top" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h4 mb-3">
+                                <i class="bi bi-lightning text-primary-custom me-2"></i>
+                                Neurologische Kinesitherapie
+                            </h3>
+                            <p>Behandeling van neurologische aandoeningen met focus op beweging en coordinatie herstel.</p>
+                            <ul class="benefits-list mb-4">
+                                <li>Stroke revalidatie</li>
+                                <li>Evenwichtstherapie</li>
+                                <li>Coordinatieoefeningen</li>
+                                <li>Spasticiteitsbehandeling</li>
+                                <li>Functioneel bewegingstraining</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="neurologie.html" class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i>Meer Details
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Neurologische Kinesitherapie</h3>
-                    <p class="text-gray-700 mb-6">Behandeling van neurologische aandoeningen met focus op beweging en coördinatie herstel.</p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>• Stroke revalidatie</li>
-                        <li>• Evenwichtstherapie</li>
-                        <li>• Coördinatieoefeningen</li>
-                        <li>• Spasticiteitsbehandeling</li>
-                        <li>• Functioneel bewegingstraining</li>
-                    </ul>
-                    <a href="/kinesitherapie/neurologie.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 inline-block">
-                        Meer Details
-                    </a>
                 </div>
 
                 <!-- Gangrevalidatie Card -->
-                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl hover-scale">
-                    <div class="mb-6">
-                        <img src="../assets/img/gangrevalidatie.jpeg" alt="Gangrevalidatie en looptraining aan huis in Grimbergen" class="w-full h-48 object-cover rounded-lg" width="4032" height="3024" loading="lazy" decoding="async">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="../assets/img/gangrevalidatie nieuw.jpg" alt="Gangrevalidatie en looptraining aan huis in Grimbergen" class="card-img-top" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h4 mb-3">
+                                <i class="bi bi-person-walking text-primary-custom me-2"></i>
+                                Gangrevalidatie
+                            </h3>
+                            <p>Herstel van vertrouwen en stabiliteit bij het stappen na operatie of val.</p>
+                            <ul class="benefits-list mb-4">
+                                <li>Individuele ganganalyse</li>
+                                <li>Training met loophulpmiddelen</li>
+                                <li>Balans en coordinatie oefeningen</li>
+                                <li>Focus op zelfzeker stappen</li>
+                                <li>Thuisbehandeling mogelijk</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="gangrevalidatie.html" class="btn btn-accent">
+                                    <i class="bi bi-arrow-right"></i>Meer Details
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Gangrevalidatie</h3>
-                    <p class="text-gray-700 mb-6">Herstel van vertrouwen en stabiliteit bij het stappen na operatie of val.</p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>• Individuele ganganalyse</li>
-                        <li>• Training met loophulpmiddelen</li>
-                        <li>• Balans en coördinatie oefeningen</li>
-                        <li>• Focus op zelfzeker stappen</li>
-                        <li>• Thuisbehandeling mogelijk</li>
-                    </ul>
-                    <a href="/kinesitherapie/gangrevalidatie.html" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition duration-300 inline-block">
-                        Meer Details
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Treatment Process -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ons Behandelproces</h2>
-                <p class="text-lg text-gray-600">Van intake tot herstel, stap voor stap begeleid</p>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ons Behandelproces</h2>
+                <p class="lead">Van intake tot herstel, stap voor stap begeleid</p>
             </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">1</span>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle mx-auto">
+                            <span class="fw-bold fs-5">1</span>
+                        </div>
+                        <h4>Intake & Anamnese</h4>
+                        <p>Uitgebreide evaluatie van uw klachten en medische geschiedenis</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Intake & Anamnese</h3>
-                    <p class="text-gray-600">Uitgebreide evaluatie van uw klachten en medische geschiedenis</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">2</span>
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle green mx-auto">
+                            <span class="fw-bold fs-5">2</span>
+                        </div>
+                        <h4>Onderzoek & Diagnose</h4>
+                        <p>Functioneel onderzoek en opstellen van behandeldoelen</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Onderzoek & Diagnose</h3>
-                    <p class="text-gray-600">Functioneel onderzoek en opstellen van behandeldoelen</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">3</span>
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle orange mx-auto">
+                            <span class="fw-bold fs-5">3</span>
+                        </div>
+                        <h4>Behandelplan</h4>
+                        <p>Persoonlijk behandelplan op maat van uw behoeften</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Behandelplan</h3>
-                    <p class="text-gray-600">Persoonlijk behandelplan op maat van uw behoeften</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white font-bold text-xl">4</span>
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box text-center">
+                        <div class="icon-circle mx-auto">
+                            <span class="fw-bold fs-5">4</span>
+                        </div>
+                        <h4>Behandeling & Follow-up</h4>
+                        <p>Actieve behandeling met regelmatige evaluatie van vooruitgang</p>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Behandeling & Follow-up</h3>
-                    <p class="text-gray-600">Actieve behandeling met regelmatige evaluatie van vooruitgang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voordelen -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Voordelen van Thuisbehandeling</h2>
+                <p class="lead">Waarom kinesitherapie aan huis de beste keuze kan zijn voor uw herstel</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <i class="bi bi-house-heart"></i>
+                        </div>
+                        <h4>Vertrouwde Omgeving</h4>
+                        <p>Herstel in uw eigen huis bevordert ontspanning en versnelt het genezingsproces significant.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle green">
+                            <i class="bi bi-car-front"></i>
+                        </div>
+                        <h4>Geen Verplaatsing</h4>
+                        <p>Ideaal voor patiënten met mobiliteitsproblemen, transportmoeilijkheden of na operaties.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle orange">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+                        <h4>Persoonlijke Aandacht</h4>
+                        <p>One-on-one begeleiding zonder afleiding, volledig gefocust op uw individuele herstelproces.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h4>Flexibele Planning</h4>
+                        <p>Afspraken die perfect passen bij uw dagschema, levenssituatie en herstelbehoeften.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-blue-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Klaar voor uw behandeling?</h2>
-            <p class="text-xl mb-8 opacity-90">Maak een afspraak en start uw weg naar herstel</p>
-            <a href="/contact.html" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">
-                Afspraak Maken
-            </a>
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2>Klaar voor uw behandeling?</h2>
+                    <p class="lead mb-4">Maak een afspraak en start uw weg naar herstel</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn btn-accent btn-lg">
+                            <i class="bi bi-calendar-plus"></i>Maak Afspraak
+                        </a>
+                        <a href="tel:0474878021" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-telephone"></i>Bel: 0474 87 80 21
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">PhysioVisit</h3>
-                    <p class="text-gray-400">Professionele kinesitherapie en verhuur van revalidatieapparatuur</p>
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>PhysioVisit</h5>
+                    <p>Professionele kinesitherapie aan huis en verhuur van revalidatieapparatuur in de regio Grimbergen.</p>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Diensten</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/kinesitherapie/orthopedie.html" class="hover:text-white">Orthopedie</a></li>
-                        <li><a href="/kinesitherapie/neurologie.html" class="hover:text-white">Neurologie</a></li>
-                        <li><a href="/kinesitherapie/gangrevalidatie.html" class="hover:text-white">Gangrevalidatie</a></li>
-                        <li><a href="/kinetec-huren.html" class="hover:text-white">Kinetec Verhuur</a></li>
-                        <li><a href="/hometrainer-huren.html" class="hover:text-white">Hometrainers</a></li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Kinesitherapie</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="orthopedie.html">Orthopedie</a></li>
+                        <li><a href="neurologie.html">Neurologie</a></li>
+                        <li><a href="gangrevalidatie.html">Gangrevalidatie</a></li>
+                        <li><a href="../kinetec-huren.html">Kinetec Verhuur</a></li>
+                        <li><a href="../contact.html">Afspraak Maken</a></li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>📍 Kine: Kasteelstraat 89, Strombeek-Bever</li>
-                        <li>📍 Verhuur: Gaston Devoswijk 21, Grimbergen</li>
-                        <li>📞 0474 87 80 21</li>
-                        <li>✉️ info@physiovisit.be</li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Werkgebied</h5>
+                    <ul class="list-unstyled">
+                        <li>Grimbergen</li>
+                        <li>Strombeek-Bever</li>
+                        <li>Humbeek</li>
+                        <li>Beigem</li>
+                        <li>Koningslo</li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Openingsuren</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Ma-Vr: 9:00 - 17:00</li>
-                        <li>Za & Zo: Gesloten</li>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt me-2"></i>Kasteelstraat 89, Strombeek-Bever</li>
+                        <li><i class="bi bi-telephone me-2"></i>0474 87 80 21</li>
+                        <li><i class="bi bi-envelope me-2"></i>info@physiovisit.be</li>
+                        <li><i class="bi bi-clock me-2"></i>Ma-Vr: 9:00 - 17:00</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 PhysioVisit. Alle rechten voorbehouden.</p>
+
+            <hr class="my-4 border-secondary">
+
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 PhysioVisit. Alle rechten voorbehouden.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.min.js"></script>
+
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    function toggleDropdown(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const dropdown = event.target.nextElementSibling;
+        const isCurrentlyOpen = dropdown && dropdown.classList.contains('show');
+
+        // Close all dropdowns first
+        const allDropdowns = document.querySelectorAll('.dropdown-menu');
+        allDropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('show');
+            }
         });
+
+        // If the clicked dropdown was not open, open it
+        if (dropdown && !isCurrentlyOpen) {
+            dropdown.classList.add('show');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+        dropdownToggles.forEach(function(toggle) {
+            if (isMobileDevice()) {
+            toggle.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                toggleDropdown(e);
+                }
+        });
+
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleDropdown(e);
+                }
+        });
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+                }
+        });
+            }
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function(dropdown) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+                }
+        });
+            }
+        });
+    });
     </script>
     <script src="/assets/js/gads-tracking.js" defer></script>
 </body>
