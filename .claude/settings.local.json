@@ -29,11 +29,23 @@
       "Bash(git add:*)",
       "Bash(git push:*)",
       "Bash(git commit:*)",
+      "Bash(python fix_titles.py:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nSEO audit: canonical, OG, Twitter tags + fixes op alle 42 pagina''s\n\n- Canonical tags toegevoegd aan alle 42 pagina''s\n- Open Graph tags \\(og:title, og:description, og:image, og:url, og:locale, og:site_name\\) op alle 42 pagina''s\n- Twitter Card tags \\(twitter:card, twitter:title, twitter:description, twitter:image\\) op alle 42 pagina''s\n- Duplicate titles gefixed op 5 locatiepagina''s \\(kinesitherapie-grimbergen/strombeek/humbeek/beigem/koningslo\\)\n- Duplicate meta descriptions gefixed op 5 locatiepagina''s\n- Dubbele H1 tags gefixed in kinesitherapie/index.html en kinesitherapie/gangrevalidatie.html\n- Placeholder Google Search Console code verwijderd uit index.html\n- Placeholder Facebook Pixel ID verwijderd uit index.html\n- Verlopen priceValidUntil schema datums bijgewerkt naar 2026-12-31 \\(12 pagina''s\\)\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(python add_schema.py:*)",
+      "Bash(python improve_internal_links.py:*)",
+      "Bash(git status:*)",
+      "Bash(python fix_styling.py:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nStyling fix: alle secties en kleuren consistent met site huisstijl\n\n- Gerelateerde Diensten secties restyled met icon-circles en section-alt \\(cream achtergrond\\)\n- Blauwe btn-outline-primary knoppen vervangen door kaart-links zonder blauwe tekst\n- Blog Coming Soon artikelen verwijderd van blog index \\(alleen 3 echte artikelen tonen\\)\n- Blog hero gradients: #A3BFFA \\(blauw\\) vervangen door #D4A373 \\(terracotta\\) op alle 4 blog pagina''s\n- Felle Bootstrap kleuren \\(bg-success, bg-warning, bg-danger, bg-info, bg-primary\\) vervangen door site-kleuren \\(#6D8299 en #D4A373\\)\n- Kinetec-huren CTA buttons: flex-column op mobiel om overlap te voorkomen\n- Alle 23 bestanden consistent met dezelfde kleurenpalet\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(python:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nLokale SEO optimalisatie: titles, descriptions, FAQ secties en schema markup\n\n- Meta titles geoptimaliseerd naar max 60 chars met lokale keywords \\(35 pagina''s\\)\n- Meta descriptions verbeterd met actie-gerichte tekst, prijzen en telefoonnummer\n- FAQ secties met accordion toegevoegd aan 6 pagina''s \\(hometrainer-huren, spoed, ons-team, 3 hometrainer types\\)\n- FAQPage JSON-LD schema markup toegevoegd aan alle 6 nieuwe FAQ secties\n- Tailwind pagina titles uitgebreid met ''aan Huis'' en ''Grimbergen'' keywords\n- Location page titles ingekort tot max 60 chars\n- Blog titles en descriptions geoptimaliseerd met relevante zoektermen\n- Kinetec specialty descriptions aangevuld met prijzen en contactgegevens\n- OG en Twitter Card meta tags gesynchroniseerd met nieuwe titles/descriptions\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nPrijsupdate kinesitherapie sessie: €50/€35 → €52 op alle pagina''s\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(xargs ls:*)",
       "Bash(python3 -c \":*)",
-      "Bash(git rebase --continue)",
-      "Bash(GIT_EDITOR=true git rebase --continue)",
-      "Bash(git -c core.editor=true rebase --continue)",
-      "Bash(GIT_EDITOR=\"echo\" git rebase --continue)"
+      "Bash(git fetch origin main)",
+      "Bash(git rebase origin/main)",
+      "Bash(git stash)",
+      "Bash(git stash pop)"
     ],
     "deny": []
   }
