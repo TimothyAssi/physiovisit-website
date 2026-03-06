@@ -439,7 +439,7 @@ h3 {
 }
 
 .testimonial-card::before {
-    content: """;
+    content: "\201C";
     font-size: 4rem;
     color: var(--primary-blue);
     opacity: 0.3;
