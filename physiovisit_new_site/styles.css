@@ -44,6 +44,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Global link styling - prevent default blue links */
+a {
+    color: var(--accent-terracotta);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-terracotta-hover);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark);
@@ -614,6 +625,25 @@ h3 {
     font-size: 1.25rem;
 }
 
+.cta-section .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.cta-section .btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background-color: rgba(255,255,255,0.15);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.cta-section .btn-outline-light:hover {
+    background-color: white;
+    color: var(--primary-warm-grey);
+    border-color: white;
+}
+
 /* Price Calculator */
 .price-calculator {
     background: var(--background-white);
@@ -686,6 +716,23 @@ h3 {
     
     .team-photo {
         margin-bottom: 2rem;
+    }
+
+    .cta-section {
+        padding: 3.5rem 0;
+    }
+
+    .cta-section .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-section .lead {
+        font-size: 1rem;
     }
 }
 
@@ -1058,6 +1105,7 @@ img[src=""] {
     
     .service-image-container {
         height: auto;
+        min-height: 250px;
     }
     
     .choice-image-container {
