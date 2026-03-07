@@ -46,7 +46,9 @@
       "Bash(git rebase origin/main)",
       "Bash(git stash)",
       "Bash(git stash pop)",
-      "WebFetch(domain:www.physiovisit.be)"
+      "WebFetch(domain:www.physiovisit.be)",
+      "Bash(__NEW_LINE_c795f2417cbc0fd4__ python3 -c \":*)",
+      "Bash(__NEW_LINE_38b555ebc6938009__ python3 -c \":*)"
     ],
     "deny": []
   }
