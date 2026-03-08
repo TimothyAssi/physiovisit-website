@@ -2,10 +2,10 @@ name: Automatische Blog Publicatie
 
 on:
   schedule:
-    # Elke dinsdag om 19:00 UTC (= 20:00 Belgische wintertijd / 21:00 zomertijd)
-    - cron: '0 19 * * 2'
-    # Elke zaterdag om 18:00 UTC (= 19:00 Belgische wintertijd / 20:00 zomertijd)
-    - cron: '0 18 * * 6'
+    # Elke dinsdag om 03:00 UTC (= 04:00 Belgische wintertijd / 05:00 zomertijd)
+    - cron: '0 3 * * 2'
+    # Elke zaterdag om 03:00 UTC (= 04:00 Belgische wintertijd / 05:00 zomertijd)
+    - cron: '0 3 * * 6'
   workflow_dispatch:
     inputs:
       blog_type:
