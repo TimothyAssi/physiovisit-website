@@ -1,0 +1,71 @@
+name: Automatische Blog Publicatie
+
+on:
+  schedule:
+    # Elke dinsdag om 19:00 UTC (= 20:00 Belgische wintertijd / 21:00 zomertijd)
+    - cron: '0 19 * * 2'
+    # Elke zaterdag om 18:00 UTC (= 19:00 Belgische wintertijd / 20:00 zomertijd)
+    - cron: '0 18 * * 6'
+  workflow_dispatch:
+    inputs:
+      blog_type:
+        description: 'Type blog om te genereren'
+        required: true
+        default: 'kinesitherapie'
+        type: choice
+        options:
+          - kinesitherapie
+          - kinetec
+
+permissions:
+  contents: write
+
+jobs:
+  publiceer-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Afhankelijkheden installeren
+        run: pip install -r scripts/requirements.txt
+
+      - name: Blogtype bepalen op basis van dag
+        id: blog_type
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "type=${{ github.event.inputs.blog_type }}" >> $GITHUB_OUTPUT
+          elif [ "$(date +%u)" == "2" ]; then
+            echo "type=kinesitherapie" >> $GITHUB_OUTPUT
+          else
+            echo "type=kinetec" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Blog genereren en publiceren
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          BLOG_TYPE: ${{ steps.blog_type.outputs.type }}
+        run: python scripts/generate_blog.py
+
+      - name: Wijzigingen committen en pushen
+        run: |
+          git config --local user.email "blog-bot@physiovisit.be"
+          git config --local user.name "PhysioVisit Blog Bot"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Geen wijzigingen om te committen"
+          else
+            git commit -m "Automatisch gepubliceerd: Nieuw blogartikel $(date +'%Y-%m-%d') [${{ steps.blog_type.outputs.type }}]"
+            git push origin HEAD
+          fi
