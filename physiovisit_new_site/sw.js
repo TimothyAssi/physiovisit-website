@@ -8,7 +8,7 @@ const STATIC_ASSETS = [
   '/contact.html',
   '/styles.min.css',
   '/script.min.js',
-  '/assets/img/physiovisit logo.png',
+  '/assets/img/physiovisit logo.webp',
   '/assets/img/ik en charlotte.jpg',
   '/manifest.json'
 ];
