@@ -13,7 +13,9 @@ import sys
 import json
 import re
 import datetime
+import base64
 import requests
+from io import BytesIO
 from pathlib import Path
 import anthropic
 
@@ -27,7 +29,6 @@ TOPICS_FILE = SCRIPT_DIR / "published_topics.json"
 # ─── API-configuratie ─────────────────────────────────────────────────────────
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-GOOGLE_CSE_ID = os.environ.get("GOOGLE_CSE_ID")
 
 # ─── Instellingen ─────────────────────────────────────────────────────────────
 BLOG_TYPE = os.environ.get("BLOG_TYPE", "kinesitherapie")
@@ -245,91 +246,78 @@ Genereer een JSON response in EXACT dit formaat (ALLEEN JSON, geen andere tekst)
     return json.loads(raw)
 
 
-# ─── Afbeelding ophalen ───────────────────────────────────────────────────────
+# ─── Afbeelding genereren ─────────────────────────────────────────────────────
 
-def search_and_download_image(query: str, slug: str, blog_type: str) -> str:
+def generate_image_with_gemini(query: str, slug: str, blog_type: str) -> str:
     """
-    Zoek een afbeelding via Google Custom Search API en download deze.
-    Valt terug op bestaande websiteafbeeldingen als API niet beschikbaar is.
+    Genereer een afbeelding via Gemini Flash image generation model.
+    Gebruikt een bestaande websiteafbeelding als stijlreferentie.
+    Valt terug op standaardafbeelding als de API niet beschikbaar is.
     """
     fallback = {
         "kinesitherapie": "Kineaanhuis.jpeg",
         "kinetec": "Kinetec.jpeg",
     }
 
-    if not GOOGLE_API_KEY or not GOOGLE_CSE_ID:
-        print("Google API-sleutels niet geconfigureerd → gebruik standaardafbeelding")
+    if not GOOGLE_API_KEY:
+        print("Google API-sleutel niet geconfigureerd → gebruik standaardafbeelding")
         return fallback.get(blog_type, "Kineaanhuis.jpeg")
 
     try:
-        params = {
-            "key": GOOGLE_API_KEY,
-            "cx": GOOGLE_CSE_ID,
-            "searchType": "image",
-            "q": query,
-            "num": 5,
-            "imgType": "photo",
-            "imgSize": "xlarge",
-            "safe": "active",
-        }
-        resp = requests.get(
-            "https://www.googleapis.com/customsearch/v1",
-            params=params,
-            timeout=15,
+        from google import genai
+        from google.genai import types
+
+        client = genai.Client(api_key=GOOGLE_API_KEY)
+
+        prompt = (
+            f"Generate a professional, high-quality photograph for a Belgian physiotherapy "
+            f"website blog article. Topic: {query}. "
+            f"Style: clean, warm, professional healthcare photography. "
+            f"Real people in a home care or clinical setting. European/Belgian aesthetic. "
+            f"No text, no watermarks, no logos. Suitable as a website hero image."
         )
-        data = resp.json()
 
-        if "items" not in data or not data["items"]:
-            print(f"Geen afbeeldingen gevonden voor: {query}")
-            return fallback.get(blog_type, "Kineaanhuis.jpeg")
+        contents: list = [prompt]
 
-        # Probeer de eerste bruikbare afbeelding te downloaden
-        for item in data["items"]:
-            image_url = item.get("link", "")
-            if not image_url:
-                continue
+        # Voeg stijlreferentie toe van bestaande websiteafbeelding
+        ref_img_path = IMG_DIR / fallback.get(blog_type, "Kineaanhuis.jpeg")
+        if ref_img_path.exists():
+            with open(ref_img_path, "rb") as f:
+                ref_bytes = f.read()
+            mime = "image/jpeg" if ref_img_path.suffix.lower() in (".jpg", ".jpeg") else "image/png"
+            contents.append(
+                types.Part.from_bytes(data=ref_bytes, mime_type=mime)
+            )
+            contents[0] = prompt + " Match the color palette and atmosphere of the reference image."
 
-            ext = ".jpg"
-            if ".png" in image_url.lower():
-                ext = ".png"
-            elif ".webp" in image_url.lower():
-                ext = ".webp"
+        response = client.models.generate_content(
+            model="gemini-2.0-flash-preview-image-generation",
+            contents=contents,
+            config=types.GenerateContentConfig(
+                response_modalities=["TEXT", "IMAGE"],
+            ),
+        )
 
-            safe_slug = re.sub(r'[^a-z0-9-]', '', slug[:30])
-            filename = f"blog-auto-{safe_slug}{ext}"
-            filepath = IMG_DIR / filename
-
-            try:
-                headers = {"User-Agent": "Mozilla/5.0 (PhysioVisit Blog Bot/1.0)"}
-                img_resp = requests.get(image_url, headers=headers, timeout=20, stream=True)
-                img_resp.raise_for_status()
-
-                # Controleer of het echt een afbeelding is (minimaal 10 KB)
-                content_length = int(img_resp.headers.get("content-length", 0))
-                if content_length and content_length < 10_000:
-                    continue
+        for part in response.candidates[0].content.parts:
+            if part.inline_data is not None:
+                mime_type = part.inline_data.mime_type or "image/jpeg"
+                ext = ".png" if "png" in mime_type else ".jpg"
+                safe_slug = re.sub(r"[^a-z0-9-]", "", slug[:30])
+                filename = f"blog-auto-{safe_slug}{ext}"
+                filepath = IMG_DIR / filename
 
                 with open(filepath, "wb") as f:
-                    downloaded = 0
-                    for chunk in img_resp.iter_content(chunk_size=8192):
-                        f.write(chunk)
-                        downloaded += len(chunk)
-                    if downloaded < 10_000:
-                        filepath.unlink(missing_ok=True)
-                        continue
+                    f.write(part.inline_data.data)
 
-                print(f"Afbeelding gedownload: {filename} ({downloaded // 1024} KB)")
+                size_kb = len(part.inline_data.data) // 1024
+                print(f"Afbeelding gegenereerd: {filename} ({size_kb} KB)")
                 return filename
 
-            except Exception as e:
-                print(f"Download mislukt voor {image_url}: {e}")
-                continue
-
-        print("Alle afbeeldingsdownloads mislukt → gebruik standaardafbeelding")
+        print("Geen afbeelding in Gemini-response → gebruik standaardafbeelding")
         return fallback.get(blog_type, "Kineaanhuis.jpeg")
 
     except Exception as e:
-        print(f"Afbeeldingszoekfout: {e} → gebruik standaardafbeelding")
+        print(f"Afbeeldingsgeneratie mislukt: {e} → gebruik standaardafbeelding")
         return fallback.get(blog_type, "Kineaanhuis.jpeg")
 
 
@@ -875,9 +863,9 @@ def main() -> None:
         output_path = BLOG_DIR / f"{content['slug']}.html"
         print(f"      Slug aangepast (bestond al): {content['slug']}")
 
-    # Afbeelding ophalen
-    print("\n[2/4] Afbeelding zoeken en downloaden...")
-    image_filename = search_and_download_image(
+    # Afbeelding genereren
+    print("\n[2/4] Afbeelding genereren via Gemini Flash...")
+    image_filename = generate_image_with_gemini(
         content.get("image_search_query", "physiotherapy home visit"),
         content["slug"],
         blog_type,

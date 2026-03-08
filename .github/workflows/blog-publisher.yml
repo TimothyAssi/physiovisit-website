@@ -54,7 +54,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           BLOG_TYPE: ${{ steps.blog_type.outputs.type }}
         run: python scripts/generate_blog.py
 
