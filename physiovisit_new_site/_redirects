@@ -1,16 +1,10 @@
 # Netlify Redirects File - PhysioVisit.be
 # Rules are processed top-to-bottom, first match wins
 # Netlify serves existing files by default (no force needed)
-
-# ===== DOMAIN CANONICALIZATION =====
-# Force www + HTTPS (Netlify handles HTTP→HTTPS automatically)
-# Non-www to www redirects
-https://physiovisit.be/*    https://www.physiovisit.be/:splat    301!
-http://physiovisit.be/*     https://www.physiovisit.be/:splat    301!
-http://www.physiovisit.be/* https://www.physiovisit.be/:splat    301!
+# NOTE: Netlify handles HTTP→HTTPS and non-www→www via DNS settings automatically.
+# Do NOT add domain-level redirects here — they cause redirect loops.
 
 # ===== DUPLICATE CONTENT FIXES =====
-# gangrevalidatie.html is the canonical; /kinesitherapie/gangrevalidatie.html is a subpage
 # gangrevalidatie → canonical is /kinesitherapie/gangrevalidatie.html
 /gangrevalidatie            /kinesitherapie/gangrevalidatie.html 301
 /gangrevalidatie/           /kinesitherapie/gangrevalidatie.html 301
@@ -19,7 +13,6 @@ http://www.physiovisit.be/* https://www.physiovisit.be/:splat    301!
 # ===== CLEAN URL REDIRECTS (trailing slash → .html canonical) =====
 /contact                    /contact.html                       301
 /contact/                   /contact.html                       301
-/kinesitherapie.html        /kinesitherapie.html                200
 /kinetec-huren              /kinetec-huren.html                 301
 /kinetec-huren/             /kinetec-huren.html                 301
 /hometrainer-huren          /hometrainer-huren.html             301
@@ -33,9 +26,6 @@ http://www.physiovisit.be/* https://www.physiovisit.be/:splat    301!
 # /huur-kinetec/ used to be a page, now redirects to kinetec-huren.html
 /huur-kinetec               /kinetec-huren.html                 301
 /huur-kinetec/              /kinetec-huren.html                 301
-
-# AMP variants → canonical
-/contact/?amp               /contact.html                       301
 
 # ===== FORM SUCCESS REDIRECTS =====
 /thankyou                   /thankyou.html                      200

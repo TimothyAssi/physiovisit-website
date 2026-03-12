@@ -11,19 +11,8 @@
 [forms]
   accept = ["contact", "kinetec-rental", "hometrainer-rental"]
 
-# Force HTTPS
-[[redirects]]
-  from = "http://www.physiovisit.be/*"
-  to = "https://www.physiovisit.be/:splat"
-  status = 301
-  force = true
-
-# Force www
-[[redirects]]
-  from = "https://physiovisit.be/*"
-  to = "https://www.physiovisit.be/:splat"
-  status = 301
-  force = true
+# NOTE: Netlify handles HTTP→HTTPS and non-www→www via DNS/domain settings.
+# Do NOT add domain-level redirects here — they cause redirect loops.
 
 # Optimized headers for performance
 [[headers]]
