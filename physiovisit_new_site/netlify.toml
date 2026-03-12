@@ -2,8 +2,28 @@
   publish = "/"
   command = "echo 'No build required'"
 
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = false
+
 [forms]
   accept = ["contact", "kinetec-rental", "hometrainer-rental"]
+
+# Force HTTPS
+[[redirects]]
+  from = "http://www.physiovisit.be/*"
+  to = "https://www.physiovisit.be/:splat"
+  status = 301
+  force = true
+
+# Force www
+[[redirects]]
+  from = "https://physiovisit.be/*"
+  to = "https://www.physiovisit.be/:splat"
+  status = 301
+  force = true
 
 # Optimized headers for performance
 [[headers]]

@@ -1,18 +1,47 @@
-# Netlify Redirects File
+# Netlify Redirects File - PhysioVisit.be
+# Rules are processed top-to-bottom, first match wins
+# Netlify serves existing files by default (no force needed)
 
-# Page redirects (clean URLs zonder .html extensie)
-/contact            /contact.html           200
-/contact/           /contact.html           200
-/gangrevalidatie    /gangrevalidatie.html   200
-/gangrevalidatie/   /gangrevalidatie.html   200
+# ===== DOMAIN CANONICALIZATION =====
+# Force www + HTTPS (Netlify handles HTTP→HTTPS automatically)
+# Non-www to www redirects
+https://physiovisit.be/*    https://www.physiovisit.be/:splat    301!
+http://physiovisit.be/*     https://www.physiovisit.be/:splat    301!
+http://www.physiovisit.be/* https://www.physiovisit.be/:splat    301!
 
-# Form success redirects  
-/thankyou           /thankyou.html          200
-/thankyou/          /thankyou.html          200
+# ===== DUPLICATE CONTENT FIXES =====
+# gangrevalidatie.html is the canonical; /kinesitherapie/gangrevalidatie.html is a subpage
+# gangrevalidatie → canonical is /kinesitherapie/gangrevalidatie.html
+/gangrevalidatie            /kinesitherapie/gangrevalidatie.html 301
+/gangrevalidatie/           /kinesitherapie/gangrevalidatie.html 301
+/gangrevalidatie.html       /kinesitherapie/gangrevalidatie.html 301!
 
-# Form submission success (alternative paths)
-/success            /thankyou.html          200
-/bedankt            /thankyou.html          200
+# ===== CLEAN URL REDIRECTS (trailing slash → .html canonical) =====
+/contact                    /contact.html                       301
+/contact/                   /contact.html                       301
+/kinesitherapie.html        /kinesitherapie.html                200
+/kinetec-huren              /kinetec-huren.html                 301
+/kinetec-huren/             /kinetec-huren.html                 301
+/hometrainer-huren          /hometrainer-huren.html             301
+/hometrainer-huren/         /hometrainer-huren.html             301
+/ons-team                   /ons-team.html                      301
+/ons-team/                  /ons-team.html                      301
+/zetelfiets                 /zetelfiets.html                    301
+/zetelfiets/                /zetelfiets.html                    301
 
-# Fallback for any missing pages
-/*                  /404.html               404
+# ===== OLD URL PATTERN REDIRECTS =====
+# /huur-kinetec/ used to be a page, now redirects to kinetec-huren.html
+/huur-kinetec               /kinetec-huren.html                 301
+/huur-kinetec/              /kinetec-huren.html                 301
+
+# AMP variants → canonical
+/contact/?amp               /contact.html                       301
+
+# ===== FORM SUCCESS REDIRECTS =====
+/thankyou                   /thankyou.html                      200
+/thankyou/                  /thankyou.html                      200
+/success                    /thankyou.html                      200
+/bedankt                    /thankyou.html                      200
+
+# ===== CATCH-ALL 404 =====
+/*                          /404.html                           404
