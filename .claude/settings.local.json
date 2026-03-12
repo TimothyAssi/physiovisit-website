@@ -48,7 +48,17 @@
       "Bash(git stash pop)",
       "WebFetch(domain:www.physiovisit.be)",
       "Bash(__NEW_LINE_c795f2417cbc0fd4__ python3 -c \":*)",
-      "Bash(__NEW_LINE_38b555ebc6938009__ python3 -c \":*)"
+      "Bash(__NEW_LINE_38b555ebc6938009__ python3 -c \":*)",
+      "Bash(__NEW_LINE_7e9b268e411f9772__ python3 -c \":*)",
+      "Bash(__NEW_LINE_05ee5214e372eaa8__ python3 -c \":*)",
+      "Bash(__NEW_LINE_95855b161c46e972__ python3 -c \":*)",
+      "Bash(python3 -c \"import requests; print\\(''requests available''\\)\")",
+      "Bash(python3 -c \"import urllib.request; print\\(''urllib available''\\)\")",
+      "Bash(__NEW_LINE_1e58210bbf98438c__ python3:*)",
+      "Bash(python3:*)",
+      "Bash(__NEW_LINE_a7f83125dbffdd9d__ python3:*)",
+      "Bash(__NEW_LINE_1f179204f776a133__ python3:*)",
+      "Bash(__NEW_LINE_94e246be712ced7c__ python3:*)"
     ],
     "deny": []
   }

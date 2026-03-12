@@ -22,6 +22,29 @@
 /zetelfiets                 /zetelfiets.html                    301
 /zetelfiets/                /zetelfiets.html                    301
 
+# ===== LOCATION PAGE CONSOLIDATION =====
+# Redirect shorter variants to "aan huis" canonical versions
+# Prevents thin/duplicate content penalty from Google
+/kinesitherapie-grimbergen              /kinesitherapie-aan-huis-grimbergen.html         301
+/kinesitherapie-grimbergen.html         /kinesitherapie-aan-huis-grimbergen.html         301!
+/kinesitherapie-beigem                  /kinesitherapie-aan-huis-beigem.html             301
+/kinesitherapie-beigem.html             /kinesitherapie-aan-huis-beigem.html             301!
+/kinesitherapie-humbeek                 /kinesitherapie-aan-huis-humbeek.html            301
+/kinesitherapie-humbeek.html            /kinesitherapie-aan-huis-humbeek.html            301!
+/kinesitherapie-koningslo               /kinesitherapie-aan-huis-koningslo.html          301
+/kinesitherapie-koningslo.html          /kinesitherapie-aan-huis-koningslo.html          301!
+/kinesitherapie-strombeek-bever         /kinesitherapie-aan-huis-strombeek-bever.html    301
+/kinesitherapie-strombeek-bever.html    /kinesitherapie-aan-huis-strombeek-bever.html    301!
+
+# Clean URL redirects for location pages
+/kinesitherapie-aan-huis-grimbergen     /kinesitherapie-aan-huis-grimbergen.html         301
+/kinesitherapie-aan-huis-beigem         /kinesitherapie-aan-huis-beigem.html             301
+/kinesitherapie-aan-huis-humbeek        /kinesitherapie-aan-huis-humbeek.html            301
+/kinesitherapie-aan-huis-koningslo      /kinesitherapie-aan-huis-koningslo.html          301
+/kinesitherapie-aan-huis-strombeek-bever /kinesitherapie-aan-huis-strombeek-bever.html   301
+/kinesitherapie                         /kinesitherapie.html                             301
+/kinesitherapie/                        /kinesitherapie.html                             301
+
 # ===== OLD URL PATTERN REDIRECTS =====
 # /huur-kinetec/ used to be a page, now redirects to kinetec-huren.html
 /huur-kinetec               /kinetec-huren.html                 301

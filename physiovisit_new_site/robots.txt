@@ -62,7 +62,7 @@ Disallow: /styles.css
 Disallow: /script.js
 
 # Sitemap
-Sitemap: https://www.physiovisit.be/sitemap.xml
+Sitemap: https://physiovisit.be/sitemap.xml
 
 # Preferred domain
-Host: https://www.physiovisit.be
+Host: https://physiovisit.be
