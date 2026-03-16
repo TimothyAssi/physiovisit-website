@@ -46,6 +46,14 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# Block old WordPress query parameters (duplicate content)
+Disallow: /*?add-to-cart=*
+Disallow: /*?s=*
+Disallow: /*?amp
+Disallow: /product/
+Disallow: /winkel/
+Disallow: /sample-page/
+
 # Block development/test files
 Disallow: /debug-images.js
 Disallow: /image-test.html

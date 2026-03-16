@@ -50,6 +50,38 @@
 /huur-kinetec               /kinetec-huren.html                 301
 /huur-kinetec/              /kinetec-huren.html                 301
 
+# ===== OLD WORDPRESS 404 FIXES =====
+# Old kinetec subpages → kinetec-huren.html
+/kinetec-huren/kinetec-huren-post-traumatische-kniestijfheid.html  /kinetec-huren.html  301
+/kinetec-huren/*            /kinetec-huren.html                 301
+
+# Old WooCommerce product pages → relevant rental pages
+/product/weerstandsbanden/  /kinetec-huren.html                 301
+/product/hometrainer/       /hometrainer-huren.html              301
+/product/spierstimulatie/   /kinetec-huren.html                 301
+/product/*                  /index.html                         301
+
+# Old WordPress blog posts → blog index
+/2024/03/03/*               /blog/                              301
+/2024/02/18/*               /blog/                              301
+/2024/*                     /blog/                              301
+
+# Old WordPress blog post (without date prefix)
+/de-return7500i-de-oplossing-voor-zorgeloze-transfers/  /blog/   301
+
+# Old WordPress pages
+/jobs/                      /ons-team.html                      301
+/winkel/                    /index.html                         301
+/huur-revalidatiemateriaal/ /kinetec-huren.html                 301
+/sample-page/feed/          /blog/                              301
+/sample-page/               /index.html                         301
+
+# ===== QUERY PARAMETER CLEANUP =====
+# Block old WordPress query strings (add-to-cart, search, amp)
+# These cause duplicate content issues
+/?add-to-cart=*             /index.html                         301
+/contact?amp                /contact.html                       301
+
 # ===== FORM SUCCESS REDIRECTS =====
 /thankyou                   /thankyou.html                      200
 /thankyou/                  /thankyou.html                      200
