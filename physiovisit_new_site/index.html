@@ -942,7 +942,26 @@
     </footer>
 
     <!-- Bootstrap JS - defer loading -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Minimal navbar/dropdown JS instead of full Bootstrap bundle (saves ~80KB) -->
+    <script>
+    document.addEventListener('DOMContentLoaded',function(){
+        // Navbar toggler
+        var t=document.querySelector('.navbar-toggler'),c=document.querySelector('.navbar-collapse');
+        if(t&&c){t.addEventListener('click',function(){c.classList.toggle('show')})}
+        // Dropdowns
+        document.querySelectorAll('.dropdown-toggle').forEach(function(d){
+            d.addEventListener('click',function(e){
+                e.preventDefault();
+                var m=this.nextElementSibling;
+                document.querySelectorAll('.dropdown-menu.show').forEach(function(x){if(x!==m)x.classList.remove('show')});
+                if(m)m.classList.toggle('show');
+            });
+        });
+        document.addEventListener('click',function(e){
+            if(!e.target.closest('.dropdown'))document.querySelectorAll('.dropdown-menu.show').forEach(function(x){x.classList.remove('show')});
+        });
+    });
+    </script>
 
     <!-- Service Worker Cleanup - remove old SW that causes cross-origin CSS issues -->
     <script>
