@@ -133,9 +133,76 @@
     <!-- Blog Articles -->
     <section class="py-5">
         <div class="container">
+
+            <!-- Filter bar -->
+            <div class="text-center mb-5">
+                <h2 class="mb-3 h4 text-muted fw-normal">Filter op onderwerp</h2>
+                <div class="d-flex flex-wrap justify-content-center gap-2" id="filterBar">
+                    <button class="btn btn-filter active" data-filter="all">
+                        <i class="bi bi-grid-3x3-gap-fill me-1"></i>Alles
+                    </button>
+                    <button class="btn btn-filter" data-filter="kinetec">
+                        <i class="bi bi-gear me-1"></i>Kinetec
+                    </button>
+                    <button class="btn btn-filter" data-filter="knie">
+                        <i class="bi bi-person-walking me-1"></i>Knie
+                    </button>
+                    <button class="btn btn-filter" data-filter="heup">
+                        <i class="bi bi-person me-1"></i>Heup
+                    </button>
+                    <button class="btn btn-filter" data-filter="schouder">
+                        <i class="bi bi-arrows-move me-1"></i>Schouder
+                    </button>
+                    <button class="btn btn-filter" data-filter="thuisbehandeling">
+                        <i class="bi bi-house-heart me-1"></i>Thuisbehandeling
+                    </button>
+                    <button class="btn btn-filter" data-filter="neurologie">
+                        <i class="bi bi-activity me-1"></i>Neurologie
+                    </button>
+                    <button class="btn btn-filter" data-filter="ouderenzorg">
+                        <i class="bi bi-people me-1"></i>Ouderenzorg
+                    </button>
+                    <button class="btn btn-filter" data-filter="rug">
+                        <i class="bi bi-bandaid me-1"></i>Rug
+                    </button>
+                </div>
+            </div>
+
+            <style>
+                .btn-filter {
+                    background: #fff;
+                    border: 2px solid #dee2e6;
+                    color: #495057;
+                    border-radius: 50px;
+                    padding: 0.45rem 1.1rem;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    transition: all 0.2s ease;
+                }
+                .btn-filter:hover {
+                    border-color: #6D8299;
+                    color: #6D8299;
+                    background: #f0f4f7;
+                }
+                .btn-filter.active {
+                    background: #6D8299;
+                    border-color: #6D8299;
+                    color: #fff;
+                }
+                .blog-card-item {
+                    transition: opacity 0.25s ease, transform 0.25s ease;
+                }
+                .blog-card-item.hidden {
+                    display: none !important;
+                }
+                #noResults {
+                    display: none;
+                }
+            </style>
+
             <div class="row">
                 <!-- Featured Article -->
-                <div class="col-12 mb-5">
+                <div class="col-12 mb-5 blog-card-item" data-category="thuisbehandeling">
                     <div class="card border-0 shadow-lg">
                         <div class="row g-0">
                             <div class="col-md-4">
@@ -164,9 +231,13 @@
 
                 <!-- Articles Grid -->
                 <div class="col-12">
-                    <div class="row g-4">
+                    <div id="noResults" class="text-center py-5">
+                        <i class="bi bi-search fs-1 text-muted"></i>
+                        <p class="mt-3 text-muted">Geen artikelen gevonden voor dit onderwerp.</p>
+                    </div>
+                    <div class="row g-4" id="articlesGrid">
                         <!-- Article: Krachtverlies en Ouder Worden -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="ouderenzorg">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-krachtverlies-ouder-worden.webp" alt="Krachtverlies en ouder worden - kinesitherapie voor ouderen" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="800" height="420" onerror="this.onerror=null; this.src='https://placehold.co/800x420/6D8299/FFFFFF?text=Foto+volgt';">
                                 <div class="card-body">
@@ -182,7 +253,7 @@
                         </div>
 
                         <!-- Article 2 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-gids.webp" alt="Kinetec CPM machine voor knie-revalidatie" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="736">
                                 <div class="card-body">
@@ -198,7 +269,7 @@
                         </div>
 
                         <!-- Article 3 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-postoperatief.webp" alt="Postoperatieve knie-revalidatie" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1184" height="864">
                                 <div class="card-body">
@@ -214,7 +285,7 @@
                         </div>
 
                         <!-- Article 4 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-knieprothese.webp" alt="Revalidatie na knieprothese" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="768">
                                 <div class="card-body">
@@ -230,7 +301,7 @@
                         </div>
 
                         <!-- Article 5 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="heup">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-heupprothese.webp" alt="Revalidatie na heupprothese" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="768">
                                 <div class="card-body">
@@ -246,7 +317,7 @@
                         </div>
 
                         <!-- Article 6 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="thuisbehandeling">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-7situaties.webp" alt="7 situaties kinesitherapie aan huis" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="768">
                                 <div class="card-body">
@@ -262,7 +333,7 @@
                         </div>
 
                         <!-- Article 7 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="thuisbehandeling">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-actief-passief.webp" alt="Actieve vs passieve revalidatie" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="768">
                                 <div class="card-body">
@@ -278,7 +349,7 @@
                         </div>
 
                         <!-- Article 8 -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="rug">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-rugpijn.webp" alt="Rugpijn behandelen aan huis" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="768">
                                 <div class="card-body">
@@ -294,7 +365,7 @@
                         </div>
 
                         <!-- Article 9 - Kinetec Terugbetaling -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-terugbetaling.webp" alt="Kinetec terugbetaling verzekering" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="736">
                                 <div class="card-body">
@@ -310,7 +381,7 @@
                         </div>
 
                         <!-- Article 10 - Kinetec Kruisbandoperatie -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-kruisband.webp" alt="Kinetec na kruisbandoperatie" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="736">
                                 <div class="card-body">
@@ -326,7 +397,7 @@
                         </div>
 
                         <!-- Article 11 - Kinetec vs Hometrainer -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-vs-hometrainer.webp" alt="Kinetec of hometrainer na knieoperatie" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1024" height="1024">
                                 <div class="card-body">
@@ -342,7 +413,7 @@
                         </div>
 
                         <!-- Article 12 - Kinetec Gebruiksschema -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-schema.webp" alt="Kinetec gebruiksschema graden per dag" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="1408" height="736">
                                 <div class="card-body">
@@ -358,7 +429,7 @@
                         </div>
 
                         <!-- Article 13 - Valangst Ouderen -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="ouderenzorg">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-valangst-ouderen.webp" alt="Valangst bij ouderen overwinnen" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="896" height="504">
                                 <div class="card-body">
@@ -374,7 +445,7 @@
                         </div>
 
                         <!-- Article 14 - Herstel Knieprothese -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-herstel-knieprothese.webp" alt="Herstel na knieprothese week per week" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: 50% 70%;" width="896" height="504">
                                 <div class="card-body">
@@ -390,7 +461,7 @@
                         </div>
 
                         <!-- Article 15 - Verboden Bewegingen Heupprothese -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="heup">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-verboden-bewegingen-heup.webp" alt="Verboden bewegingen na heupprothese" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;" width="896" height="504">
                                 <div class="card-body">
@@ -406,7 +477,7 @@
                         </div>
 
                         <!-- Article 16 - Kinetec na Meniscusoperatie -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-meniscus.webp" alt="Kinetec na meniscusoperatie knie revalidatie thuis" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: center;" width="1408" height="736">
                                 <div class="card-body">
@@ -422,7 +493,7 @@
                         </div>
 
                         <!-- Article 17 - Neurologische Kinesitherapie aan Huis -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="neurologie thuisbehandeling">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-neurologische-kinesitherapie.webp" alt="Neurologische kinesitherapie aan huis beroerte Parkinson" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: 50% 25%;" width="896" height="504">
                                 <div class="card-body">
@@ -438,7 +509,7 @@
                         </div>
 
                         <!-- Article 18 - Kinetec Hoe Lang Huren -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="kinetec knie">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-kinetec-duur.webp" alt="Kinetec hoe lang huren na knieoperatie huurduur CPM machine" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center;" width="1408" height="736">
                                 <div class="card-body">
@@ -454,7 +525,7 @@
                         </div>
 
                         <!-- Article 19 - Revalidatie na Schouderoperatie -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 blog-card-item" data-category="schouder thuisbehandeling">
                             <div class="card h-100 border-0 shadow">
                                 <img src="../assets/img/blog-schouder-revalidatie.webp" alt="Revalidatie na schouderoperatie kinesitherapie aan huis" class="card-img-top" style="height: 220px; object-fit: cover; object-position: center;" width="1024" height="1024">
                                 <div class="card-body">
@@ -468,7 +539,7 @@
                                 </div>
                             </div>
                         </div>
-</div>
+                    </div><!-- /#articlesGrid -->
                 </div>
             </div>
         </div>
@@ -543,5 +614,37 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/gads-tracking.js" defer></script>
+
+    <!-- Blog filter script -->
+    <script>
+    (function() {
+        const filterBtns = document.querySelectorAll('#filterBar .btn-filter');
+        const cards = document.querySelectorAll('.blog-card-item');
+        const noResults = document.getElementById('noResults');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                let visible = 0;
+
+                cards.forEach(card => {
+                    const cats = card.getAttribute('data-category') || '';
+                    if (filter === 'all' || cats.split(' ').includes(filter)) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                noResults.style.display = visible === 0 ? 'block' : 'none';
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
