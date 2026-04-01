@@ -79,6 +79,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Kinesitherapie Overview -->
+  <url>
+    <loc>https://physiovisit.be/kinesitherapie/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/gangrevalidatie.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Specialty Pages -->
   <url>
     <loc>https://physiovisit.be/kinesitherapie/orthopedie.html</loc>
@@ -117,7 +131,69 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Equipment Rental Sub-pages -->
+  <!-- Kinetec Huren Sub-pages (indicaties) -->
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-knieprotheses.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-meniscusoperaties.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-ligamentreparaties.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-artroscopieen.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-kniefracturen.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-kraakbeenreparaties.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-synovectomie.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-osteochondritis-dissecans.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-post-traumatische-kniestijfheid.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/kinetec-huren-stijfheid-na-immobilisatie.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Other Equipment Rental Sub-pages -->
   <url>
     <loc>https://physiovisit.be/kinetec-verhuur-knie-revalidatie.html</loc>
     <lastmod>2026-03-12</lastmod>
@@ -237,6 +313,12 @@
   <url>
     <loc>https://physiovisit.be/blog/verboden-bewegingen-na-heupprothese.html</loc>
     <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://physiovisit.be/blog/krachtverlies-en-ouder-worden.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
