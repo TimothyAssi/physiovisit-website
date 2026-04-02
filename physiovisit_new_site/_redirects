@@ -50,6 +50,9 @@
 /huur-kinetec               /kinetec-huren.html                 301
 /huur-kinetec/              /kinetec-huren.html                 301
 
+# ===== WRONG PATH FIXES =====
+/contact/ons-team.html      /ons-team.html                      301
+
 # ===== OLD WORDPRESS 404 FIXES =====
 # Old kinetec subpages → kinetec-huren.html
 /kinetec-huren/kinetec-huren-post-traumatische-kniestijfheid.html  /kinetec-huren.html  301
