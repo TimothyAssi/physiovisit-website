@@ -10,11 +10,24 @@
 
   gtag('config', 'AW-620935990');
 
-  // Google Ads Conversie - Kinetec Huur Aanvraag
+  // Detecteer formuliertype via URL parameter
+  var formType = new URLSearchParams(window.location.search).get('form') || 'unknown';
+  var formValues = { kinetec: 17.0, hometrainer: 2.0, contact: 1.0, unknown: 1.0 };
+  var formValue = formValues[formType] || 1.0;
+
+  // Google Ads Conversie
   gtag('event', 'conversion', {
     'send_to': 'AW-620935990/CONVERSION_LABEL',
-    'value': 17.0,
+    'value': formValue,
     'currency': 'EUR'
+  });
+
+  // GA4 lead event met formuliertype
+  gtag('event', 'generate_lead', {
+    'event_category': 'lead_generation',
+    'event_label': formType + '_form',
+    'currency': 'EUR',
+    'value': formValue
   });
 </script>
     <meta charset="UTF-8">
