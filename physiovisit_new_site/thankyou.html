@@ -16,14 +16,7 @@
   var formValues = { kinetec: 17.0, hometrainer: 2.0, contact: 1.0, unknown: 1.0 };
   var formValue = formValues[formType] || 1.0;
 
-  // Google Ads Conversie
-  gtag('event', 'conversion', {
-    'send_to': 'AW-620935990/CONVERSION_LABEL',
-    'value': formValue,
-    'currency': 'EUR'
-  });
-
-  // GA4 lead event met formuliertype
+  // GA4 lead event met formuliertype (geïmporteerd in Google Ads als conversie)
   gtag('event', 'generate_lead', {
     'event_category': 'lead_generation',
     'event_label': formType + '_form',
