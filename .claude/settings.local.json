@@ -58,7 +58,15 @@
       "Bash(python3:*)",
       "Bash(__NEW_LINE_a7f83125dbffdd9d__ python3:*)",
       "Bash(__NEW_LINE_1f179204f776a133__ python3:*)",
-      "Bash(__NEW_LINE_94e246be712ced7c__ python3:*)"
+      "Bash(__NEW_LINE_94e246be712ced7c__ python3:*)",
+      "WebSearch",
+      "Bash(while read:*)",
+      "Bash(do if:*)",
+      "Bash(then echo:*)",
+      "Bash(grep -c \"<h1\" blog/*.html)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/timot/physiovisit website/physiovisit_new_site/.claude/worktrees/practical-kalam/**)",
+      "Bash(GEMINI_API_KEY=AIzaSyDwOPF5Pvu03b9Enh_Z48FfskrLXoh1ulQ python gen_exercise.py \"oefening-5-kuitheffingen\" \"Physiotherapy infographic, white background, flat vector cartoon style, soft blue and teal palette, thin dark outlines. Title at top in dark navy bold sans-serif: ''Oefening 5 - Kuitheffingen''. Three light-blue rounded info pill boxes at the BOTTOM: ''HERHALINGEN: 15'', ''SERIES: 3'', ''HOUDEN: 2 sec''. PURE SIDE VIEW \\(profile\\) of a friendly cartoon male character with brown hair, light blue t-shirt, teal shorts, facing RIGHT, standing on a teal yoga mat. A simple wooden chair stands in front of him on his right side with the BACKREST closest to him; he holds the top of the backrest with his right hand. He stands tall and upright with both feet flat on the mat in white socks, legs straight. A small upward arrow in teal next to his lower legs indicates the upward calf-raise motion. In the TOP RIGHT corner an inset close-up circle showing the knee joint with teal highlight \\(knee anatomy with kneecap visible\\). Minimalistic, friendly, professional, square format.\")"
     ],
     "deny": []
   }
