@@ -19,7 +19,7 @@ Je maakt een nieuwe SEO-geoptimaliseerde blogpost voor de PhysioVisit website.
 
 ### 3. Afbeelding Genereren
 - Gebruik de Google Gemini API (model: `gemini-2.5-flash-image`) voor het genereren van een unieke blog header afbeelding
-- API Key: `AIzaSyDu9l1zRQ2fykJD_Yxj0ev4Wu4Vw20mD_A`
+- API Key: gebruik de GEMINI_API_KEY environment variabele (nooit hardcoden!)
 - Gebruik ALTIJD de Kinetec referentiefoto (`assets/img/Kinetec.webp`) als referentie als het blog gerelateerd is aan kinetec/revalidatie
 - Genereer in landscape 16:9 formaat (1408x736)
 - Converteer naar WebP (quality 85) voor optimale laadsnelheid
