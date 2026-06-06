@@ -838,9 +838,22 @@
                             </div>
 
                             <div class="mt-4">
-                                <label for="adres" class="form-label">Volledig adres voor levering *</label>
-                                <textarea class="form-control" id="adres" name="adres" rows="2" placeholder="Straat, nummer, postcode, gemeente" required></textarea>
-                                <div class="invalid-feedback">Vul uw leveringsadres in.</div>
+                                <label for="straat" class="form-label">Straat + huisnummer *</label>
+                                <input type="text" class="form-control" id="straat" name="straat" placeholder="Bv. Kasteelstraat 89" required>
+                                <div class="invalid-feedback">Vul uw straat en huisnummer in.</div>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-4">
+                                    <label for="postcode" class="form-label">Postcode *</label>
+                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Bv. 1850" inputmode="numeric" required>
+                                    <div class="invalid-feedback">Vul uw postcode in.</div>
+                                </div>
+                                <div class="col-md-8">
+                                    <label for="gemeente" class="form-label">Gemeente *</label>
+                                    <input type="text" class="form-control" id="gemeente" name="gemeente" placeholder="Bv. Grimbergen" required>
+                                    <div class="invalid-feedback">Vul uw gemeente in.</div>
+                                </div>
                             </div>
 
                             <div class="row g-3 mt-2">

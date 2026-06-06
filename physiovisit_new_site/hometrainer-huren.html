@@ -600,8 +600,16 @@
                                     <input type="email" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="postcode" class="form-label">Postcode/Plaats *</label>
-                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Voor levering heel België" required>
+                                    <label for="straat" class="form-label">Straat + huisnummer *</label>
+                                    <input type="text" class="form-control" id="straat" name="straat" placeholder="Bv. Kasteelstraat 89" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="postcode" class="form-label">Postcode *</label>
+                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Bv. 1850" inputmode="numeric" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="gemeente" class="form-label">Gemeente *</label>
+                                    <input type="text" class="form-control" id="gemeente" name="gemeente" placeholder="Bv. Grimbergen" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="hometrainerType" class="form-label">Gewenste hometrainer *</label>
